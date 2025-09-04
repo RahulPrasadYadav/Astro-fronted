@@ -14,6 +14,23 @@ export default {
     },
     extend: {
       colors: {
+        // AstroXprt Brand Colors
+        'astro-gold': {
+          DEFAULT: 'hsl(var(--astro-gold))',
+          light: 'hsl(var(--astro-gold-light))',
+          dark: 'hsl(var(--astro-gold-dark))'
+        },
+        'astro-navy': {
+          DEFAULT: 'hsl(var(--astro-navy))',
+          light: 'hsl(var(--astro-navy-light))',
+          dark: 'hsl(var(--astro-navy-dark))'
+        },
+        'cosmic': {
+          DEFAULT: 'hsl(var(--cosmic))',
+          light: 'hsl(var(--cosmic-light))'
+        },
+
+        // Original theme colors
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -58,6 +75,11 @@ export default {
           ring: "hsl(var(--sidebar-ring))",
         },
       },
+      fontFamily: {
+        'serif': ['Cormorant Garamond', 'serif'],
+        'sans': ['Poppins', 'Inter', 'sans-serif'],
+        'display': ['Cormorant Garamond', 'serif']
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
@@ -84,6 +106,9 @@ export default {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "float": "float 3s ease-in-out infinite",
+        "glow": "glow 2s ease-in-out infinite alternate",
+        "scroll": "scroll 60s linear infinite",
       },
     },
   },
