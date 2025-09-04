@@ -14,43 +14,43 @@
    * A different format will require also updating the theme in tailwind.config.ts.
   */
   :root {
-    /* AstroXprt Brand Colors - Ultra Light Golden */
-    --astro-gold: 52 100% 92%;
-    --astro-gold-light: 55 100% 97%;
-    --astro-gold-dark: 48 95% 85%;
+    /* AstroXprt Brand Colors - Super Bright Golden */
+    --astro-gold: 50 100% 88%;
+    --astro-gold-light: 52 100% 94%;
+    --astro-gold-dark: 48 100% 82%;
     --astro-navy: 220 25% 25%;
     --astro-navy-light: 220 20% 35%;
     --astro-navy-dark: 220 30% 15%;
     --cosmic: 280 40% 60%;
     --cosmic-light: 280 30% 90%;
 
-    --background: 55 100% 99%;
-    --foreground: 220 25% 25%;
+    --background: 52 100% 97%;
+    --foreground: 220 30% 20%;
 
-    --card: 55 100% 99%;
-    --card-foreground: 220 25% 25%;
+    --card: 52 100% 97%;
+    --card-foreground: 220 30% 20%;
 
-    --popover: 55 100% 99%;
-    --popover-foreground: 220 25% 25%;
+    --popover: 52 100% 97%;
+    --popover-foreground: 220 30% 20%;
 
-    --primary: 52 100% 92%;
-    --primary-foreground: 220 25% 25%;
+    --primary: 50 100% 88%;
+    --primary-foreground: 220 30% 20%;
 
-    --secondary: 55 100% 97%;
-    --secondary-foreground: 220 25% 25%;
+    --secondary: 52 100% 94%;
+    --secondary-foreground: 220 30% 20%;
 
-    --muted: 55 60% 98%;
-    --muted-foreground: 220 15% 50%;
+    --muted: 52 80% 96%;
+    --muted-foreground: 220 20% 45%;
 
-    --accent: 52 100% 92%;
-    --accent-foreground: 220 25% 25%;
+    --accent: 50 100% 88%;
+    --accent-foreground: 220 30% 20%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 52 80% 94%;
-    --input: 52 80% 94%;
-    --ring: 52 100% 92%;
+    --border: 50 100% 90%;
+    --input: 50 100% 90%;
+    --ring: 50 100% 88%;
 
     --radius: 0.75rem;
 
