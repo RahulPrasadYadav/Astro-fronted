@@ -14,43 +14,43 @@
    * A different format will require also updating the theme in tailwind.config.ts.
   */
   :root {
-    /* AstroXprt Brand Colors */
-    --astro-gold: 45 85% 85%;
-    --astro-gold-light: 45 90% 92%;
-    --astro-gold-dark: 45 80% 75%;
-    --astro-navy: 220 80% 12%;
-    --astro-navy-light: 220 70% 20%;
-    --astro-navy-dark: 220 85% 8%;
-    --cosmic: 260 60% 25%;
-    --cosmic-light: 260 40% 85%;
+    /* AstroXprt Brand Colors - Light Modern Golden */
+    --astro-gold: 48 95% 88%;
+    --astro-gold-light: 50 100% 95%;
+    --astro-gold-dark: 45 90% 80%;
+    --astro-navy: 220 25% 25%;
+    --astro-navy-light: 220 20% 35%;
+    --astro-navy-dark: 220 30% 15%;
+    --cosmic: 280 40% 60%;
+    --cosmic-light: 280 30% 90%;
 
-    --background: 0 0% 100%;
-    --foreground: 220 80% 12%;
+    --background: 50 100% 98%;
+    --foreground: 220 25% 25%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 220 80% 12%;
+    --card: 50 100% 98%;
+    --card-foreground: 220 25% 25%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 220 80% 12%;
+    --popover: 50 100% 98%;
+    --popover-foreground: 220 25% 25%;
 
-    --primary: 45 85% 85%;
-    --primary-foreground: 220 80% 12%;
+    --primary: 48 95% 88%;
+    --primary-foreground: 220 25% 25%;
 
-    --secondary: 45 90% 95%;
-    --secondary-foreground: 220 80% 12%;
+    --secondary: 50 100% 96%;
+    --secondary-foreground: 220 25% 25%;
 
-    --muted: 45 30% 96%;
-    --muted-foreground: 220 40% 40%;
+    --muted: 50 50% 97%;
+    --muted-foreground: 220 15% 50%;
 
-    --accent: 45 85% 85%;
-    --accent-foreground: 220 80% 12%;
+    --accent: 48 95% 88%;
+    --accent-foreground: 220 25% 25%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 45 30% 88%;
-    --input: 45 30% 88%;
-    --ring: 45 85% 85%;
+    --border: 48 70% 92%;
+    --input: 48 70% 92%;
+    --ring: 48 95% 88%;
 
     --radius: 0.75rem;
 
