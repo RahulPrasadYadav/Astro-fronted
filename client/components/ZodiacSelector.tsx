@@ -281,7 +281,7 @@ const ZodiacSelector = () => {
                       {selectedZodiac}
                     </h3>
                     <p className="text-astro-navy/70">
-                      {zodiacSigns.find(sign => sign.name === selectedZodiac)?.dates}
+                      {zodiacSigns.find(sign => sign.name === selectedZodiac)?.element} Element
                     </p>
                   </div>
                 </div>
