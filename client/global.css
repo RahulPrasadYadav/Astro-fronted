@@ -65,14 +65,14 @@
   }
 
   .dark {
-    --astro-gold: 45 75% 70%;
-    --astro-gold-light: 45 60% 80%;
-    --astro-gold-dark: 45 85% 60%;
-    --astro-navy: 220 60% 85%;
-    --astro-navy-light: 220 50% 75%;
-    --astro-navy-dark: 220 70% 90%;
-    --cosmic: 260 40% 70%;
-    --cosmic-light: 260 30% 15%;
+    --astro-gold: 48 80% 75%;
+    --astro-gold-light: 50 70% 85%;
+    --astro-gold-dark: 45 90% 65%;
+    --astro-navy: 220 40% 80%;
+    --astro-navy-light: 220 35% 70%;
+    --astro-navy-dark: 220 50% 85%;
+    --cosmic: 280 35% 75%;
+    --cosmic-light: 280 25% 20%;
 
     --background: 220 80% 8%;
     --foreground: 45 85% 85%;
