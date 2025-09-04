@@ -14,7 +14,6 @@ const zodiacSigns: ZodiacSign[] = [
     name: 'Aries',
     symbol: '♈',
     emoji: '🐏',
-    dates: 'Mar 21 - Apr 19',
     element: 'Fire',
     color: 'from-red-400 to-orange-500',
     description: 'Bold and ambitious leader'
@@ -23,7 +22,6 @@ const zodiacSigns: ZodiacSign[] = [
     name: 'Taurus',
     symbol: '♉',
     emoji: '🐂',
-    dates: 'Apr 20 - May 20',
     element: 'Earth',
     color: 'from-green-400 to-emerald-500',
     description: 'Reliable and patient soul'
@@ -32,7 +30,6 @@ const zodiacSigns: ZodiacSign[] = [
     name: 'Gemini',
     symbol: '♊',
     emoji: '👯',
-    dates: 'May 21 - Jun 20',
     element: 'Air',
     color: 'from-yellow-400 to-amber-500',
     description: 'Curious and adaptable mind'
@@ -41,7 +38,6 @@ const zodiacSigns: ZodiacSign[] = [
     name: 'Cancer',
     symbol: '♋',
     emoji: '🦀',
-    dates: 'Jun 21 - Jul 22',
     element: 'Water',
     color: 'from-blue-400 to-cyan-500',
     description: 'Intuitive and caring heart'
@@ -50,7 +46,6 @@ const zodiacSigns: ZodiacSign[] = [
     name: 'Leo',
     symbol: '♌',
     emoji: '🦁',
-    dates: 'Jul 23 - Aug 22',
     element: 'Fire',
     color: 'from-orange-400 to-yellow-500',
     description: 'Generous and warm-hearted'
@@ -59,7 +54,6 @@ const zodiacSigns: ZodiacSign[] = [
     name: 'Virgo',
     symbol: '♍',
     emoji: '👤',
-    dates: 'Aug 23 - Sep 22',
     element: 'Earth',
     color: 'from-green-500 to-teal-500',
     description: 'Analytical and kind perfectionist'
@@ -68,7 +62,6 @@ const zodiacSigns: ZodiacSign[] = [
     name: 'Libra',
     symbol: '♎',
     emoji: '⚖️',
-    dates: 'Sep 23 - Oct 22',
     element: 'Air',
     color: 'from-pink-400 to-rose-500',
     description: 'Diplomatic and fair-minded'
@@ -77,7 +70,6 @@ const zodiacSigns: ZodiacSign[] = [
     name: 'Scorpio',
     symbol: '♏',
     emoji: '🦂',
-    dates: 'Oct 23 - Nov 21',
     element: 'Water',
     color: 'from-purple-500 to-indigo-600',
     description: 'Passionate and resourceful'
@@ -86,7 +78,6 @@ const zodiacSigns: ZodiacSign[] = [
     name: 'Sagittarius',
     symbol: '♐',
     emoji: '🏹',
-    dates: 'Nov 22 - Dec 21',
     element: 'Fire',
     color: 'from-purple-400 to-pink-500',
     description: 'Generous and idealistic'
@@ -95,7 +86,6 @@ const zodiacSigns: ZodiacSign[] = [
     name: 'Capricorn',
     symbol: '♑',
     emoji: '🐐',
-    dates: 'Dec 22 - Jan 19',
     element: 'Earth',
     color: 'from-gray-500 to-slate-600',
     description: 'Responsible and disciplined'
@@ -104,7 +94,6 @@ const zodiacSigns: ZodiacSign[] = [
     name: 'Aquarius',
     symbol: '♒',
     emoji: '🏺',
-    dates: 'Jan 20 - Feb 18',
     element: 'Air',
     color: 'from-blue-500 to-indigo-500',
     description: 'Progressive and original'
@@ -113,7 +102,6 @@ const zodiacSigns: ZodiacSign[] = [
     name: 'Pisces',
     symbol: '♓',
     emoji: '🐟',
-    dates: 'Feb 19 - Mar 20',
     element: 'Water',
     color: 'from-teal-400 to-blue-500',
     description: 'Compassionate and artistic'
