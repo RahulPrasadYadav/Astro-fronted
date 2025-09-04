@@ -195,3 +195,8 @@
   0% { transform: translate(-50%, -50%) rotate(270deg) translateX(270px) rotate(-270deg); }
   100% { transform: translate(-50%, -50%) rotate(630deg) translateX(270px) rotate(-630deg); }
 }
+
+/* Utility classes */
+.bg-gradient-radial {
+  background: radial-gradient(var(--tw-gradient-stops));
+}
