@@ -1,4 +1,4 @@
-import Hero from '../components/Hero';
+import AstrologyAvatar from '../components/AstrologyAvatar';
 import ZodiacSelector from '../components/ZodiacSelector';
 import AstrologerCards from '../components/AstrologerCards';
 import CustomerReviews from '../components/CustomerReviews';
@@ -9,7 +9,7 @@ import BlogPreview from '../components/BlogPreview';
 export default function Index() {
   return (
     <div className="min-h-screen">
-      <Hero />
+      <AstrologyAvatar />
       <ZodiacSelector />
       <AstrologerCards />
       <CustomerReviews />
