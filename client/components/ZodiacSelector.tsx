@@ -180,14 +180,9 @@ const ZodiacCard = ({ sign, isSelected, onClick }: {
         </div>
 
         {/* Sign Name */}
-        <h3 className="text-xl font-display font-bold text-astro-navy mb-1 group-hover:text-astro-gold-dark transition-colors">
+        <h3 className="text-xl font-display font-bold text-astro-navy mb-3 group-hover:text-astro-gold-dark transition-colors">
           {sign.name}
         </h3>
-
-        {/* Dates */}
-        <p className="text-sm text-astro-navy/70 mb-2 font-medium">
-          {sign.dates}
-        </p>
 
         {/* Element Badge */}
         <div className={`
