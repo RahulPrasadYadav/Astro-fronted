@@ -149,3 +149,8 @@
     transform: translateX(-100%);
   }
 }
+
+/* Pause animation on hover */
+.pause-scroll:hover {
+  animation-play-state: paused;
+}
