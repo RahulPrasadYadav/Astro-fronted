@@ -99,12 +99,11 @@ const AstrologyAvatar = () => {
                 {[Sun, Moon, Star, Sparkles].map((Icon, index) => (
                   <div
                     key={index}
-                    className={`absolute w-12 h-12 bg-gradient-to-br ${currentAstrologer.color} rounded-full flex items-center justify-center text-white shadow-lg`}
+                    className={`absolute w-12 h-12 bg-gradient-to-br ${currentAstrologer.color} rounded-full flex items-center justify-center text-white shadow-lg animate-orbit-${index}`}
                     style={{
                       top: `${50 + 45 * Math.sin(2 * Math.PI * index / 4)}%`,
                       left: `${50 + 45 * Math.cos(2 * Math.PI * index / 4)}%`,
-                      transform: 'translate(-50%, -50%)',
-                      animation: `orbit-${index} 15s linear infinite`
+                      transform: 'translate(-50%, -50%)'
                     }}
                   >
                     <Icon className="w-6 h-6" />
