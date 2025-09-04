@@ -83,7 +83,7 @@ const Navigation = () => {
                   <Link
                     key={item.name}
                     to={item.path}
-                    className="flex items-center space-x-3 text-astro-navy hover:text-astro-gold-dark transition-colors py-2"
+                    className="flex items-center space-x-3 text-astro-navy hover:text-astro-gold-dark transition-colors py-2 text-sm"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     <Icon className="w-5 h-5" />
