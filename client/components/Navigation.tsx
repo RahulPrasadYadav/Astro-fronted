@@ -38,7 +38,7 @@ const Navigation = () => {
               <Link
                 key={item.name}
                 to={item.path}
-                className="text-astro-navy hover:text-astro-gold-dark transition-colors duration-200 font-medium"
+                className="text-astro-navy hover:text-astro-gold-dark transition-colors duration-200 font-medium text-sm"
               >
                 {item.name}
               </Link>
