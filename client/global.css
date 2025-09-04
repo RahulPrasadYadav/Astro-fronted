@@ -14,43 +14,43 @@
    * A different format will require also updating the theme in tailwind.config.ts.
   */
   :root {
-    /* AstroXprt Brand Colors - Light Modern Golden */
-    --astro-gold: 48 95% 88%;
-    --astro-gold-light: 50 100% 95%;
-    --astro-gold-dark: 45 90% 80%;
+    /* AstroXprt Brand Colors - Ultra Light Golden */
+    --astro-gold: 52 100% 92%;
+    --astro-gold-light: 55 100% 97%;
+    --astro-gold-dark: 48 95% 85%;
     --astro-navy: 220 25% 25%;
     --astro-navy-light: 220 20% 35%;
     --astro-navy-dark: 220 30% 15%;
     --cosmic: 280 40% 60%;
     --cosmic-light: 280 30% 90%;
 
-    --background: 50 100% 98%;
+    --background: 55 100% 99%;
     --foreground: 220 25% 25%;
 
-    --card: 50 100% 98%;
+    --card: 55 100% 99%;
     --card-foreground: 220 25% 25%;
 
-    --popover: 50 100% 98%;
+    --popover: 55 100% 99%;
     --popover-foreground: 220 25% 25%;
 
-    --primary: 48 95% 88%;
+    --primary: 52 100% 92%;
     --primary-foreground: 220 25% 25%;
 
-    --secondary: 50 100% 96%;
+    --secondary: 55 100% 97%;
     --secondary-foreground: 220 25% 25%;
 
-    --muted: 50 50% 97%;
+    --muted: 55 60% 98%;
     --muted-foreground: 220 15% 50%;
 
-    --accent: 48 95% 88%;
+    --accent: 52 100% 92%;
     --accent-foreground: 220 25% 25%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 48 70% 92%;
-    --input: 48 70% 92%;
-    --ring: 48 95% 88%;
+    --border: 52 80% 94%;
+    --input: 52 80% 94%;
+    --ring: 52 100% 92%;
 
     --radius: 0.75rem;
 
