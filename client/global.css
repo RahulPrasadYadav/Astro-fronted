@@ -174,3 +174,24 @@
 .slide-in-from-bottom {
   animation: slide-in-from-bottom 0.5s ease-out;
 }
+
+/* Orbital animations for avatar elements */
+@keyframes orbit-0 {
+  0% { transform: translate(-50%, -50%) rotate(0deg) translateX(270px) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg) translateX(270px) rotate(-360deg); }
+}
+
+@keyframes orbit-1 {
+  0% { transform: translate(-50%, -50%) rotate(90deg) translateX(270px) rotate(-90deg); }
+  100% { transform: translate(-50%, -50%) rotate(450deg) translateX(270px) rotate(-450deg); }
+}
+
+@keyframes orbit-2 {
+  0% { transform: translate(-50%, -50%) rotate(180deg) translateX(270px) rotate(-180deg); }
+  100% { transform: translate(-50%, -50%) rotate(540deg) translateX(270px) rotate(-540deg); }
+}
+
+@keyframes orbit-3 {
+  0% { transform: translate(-50%, -50%) rotate(270deg) translateX(270px) rotate(-270deg); }
+  100% { transform: translate(-50%, -50%) rotate(630deg) translateX(270px) rotate(-630deg); }
+}
