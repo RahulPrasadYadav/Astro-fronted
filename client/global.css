@@ -150,7 +150,27 @@
   }
 }
 
+@keyframes slide-in-from-bottom {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 /* Pause animation on hover */
 .pause-scroll:hover {
   animation-play-state: paused;
+}
+
+/* Slide in animation utility */
+.animate-in {
+  animation-fill-mode: both;
+}
+
+.slide-in-from-bottom {
+  animation: slide-in-from-bottom 0.5s ease-out;
 }
