@@ -4,7 +4,6 @@ interface ZodiacSign {
   name: string;
   symbol: string;
   emoji: string;
-  dates: string;
   element: string;
   color: string;
   description: string;
