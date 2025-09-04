@@ -4,6 +4,7 @@ import AstrologerCards from '../components/AstrologerCards';
 import CustomerReviews from '../components/CustomerReviews';
 import CelebrityVideos from '../components/CelebrityVideos';
 import FreeServices from '../components/FreeServices';
+import FAQ from '../components/FAQ';
 import BlogPreview from '../components/BlogPreview';
 
 export default function Index() {
@@ -15,6 +16,7 @@ export default function Index() {
       <CustomerReviews />
       <CelebrityVideos />
       <FreeServices />
+      <FAQ />
       <BlogPreview />
     </div>
   );
