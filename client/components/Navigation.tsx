@@ -27,7 +27,7 @@ const Navigation = () => {
             <div className="w-8 h-8 bg-gradient-to-br from-astro-gold to-astro-gold-dark rounded-full flex items-center justify-center">
               <Star className="w-5 h-5 text-astro-navy" />
             </div>
-            <span className="text-2xl font-display font-bold text-astro-navy">
+            <span className="text-xl font-display font-bold text-astro-navy">
               AstroXprt
             </span>
           </Link>
