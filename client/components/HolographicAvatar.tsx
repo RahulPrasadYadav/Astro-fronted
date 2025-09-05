@@ -40,7 +40,7 @@ const HolographicAvatar = () => {
   useEffect(() => {
     const id = setInterval(() => {
       if (!hoverRef.current) setIndex(i => (i + 1) % slides.length);
-    }, 4500);
+    }, 2000);
     return () => clearInterval(id);
   }, []);
 
