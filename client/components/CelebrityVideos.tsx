@@ -85,7 +85,7 @@ const VideoCard = ({ video }: { video: CelebrityVideo }) => {
         
         {/* Content */}
         <div className="p-4 bg-white">
-          <h3 className="font-display font-semibold text-astro-navy text-lg mb-2 group-hover:text-astro-gold-dark transition-colors">
+          <h3 className="font-display font-semibold text-astro-navy text-lg mb-2 group-hover:text-astro-orange transition-colors">
             {video.title}
           </h3>
           <p className="text-astro-navy/80 font-medium mb-2">{video.celebrity}</p>
