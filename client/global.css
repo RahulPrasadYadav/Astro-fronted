@@ -207,3 +207,11 @@
 .bg-gradient-radial {
   background: radial-gradient(var(--tw-gradient-stops));
 }
+
+@keyframes tilt {
+  0% { transform: rotate(-6deg) translateY(0px); }
+  50% { transform: rotate(0deg) translateY(-6px); }
+  100% { transform: rotate(6deg) translateY(0px); }
+}
+
+.animate-tilt { animation: tilt 6s ease-in-out infinite alternate; }
