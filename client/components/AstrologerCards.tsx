@@ -208,9 +208,9 @@ const AstrologerCards = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-display font-bold text-astro-navy mb-4">
+          <h2 className="text-4xl md:text-5xl font-display font-bold text-astro-orange mb-4">
             Consult The Right{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-astro-gold to-astro-gold-dark">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-astro-orange-light to-astro-orange">
               Astrologer
             </span>{' '}
             For You
