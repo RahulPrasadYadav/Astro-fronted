@@ -134,25 +134,6 @@ const ZodiacCard = ({ sign, isSelected, onClick }: {
         `}
       />
       
-      {/* Floating Particles */}
-      <div className="absolute inset-0 overflow-hidden">
-        {[...Array(8)].map((_, i) => (
-          <div
-            key={i}
-            className={`
-              absolute w-1 h-1 bg-gradient-to-r ${sign.color} rounded-full 
-              animate-pulse opacity-60 group-hover:animate-bounce
-            `}
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${i * 0.3}s`,
-              animationDuration: `${2 + Math.random() * 2}s`
-            }}
-          />
-        ))}
-      </div>
-
       {/* Content */}
       <div className="relative z-10 p-6 text-center">
         {/* Avatar Circle */}
@@ -184,12 +165,8 @@ const ZodiacCard = ({ sign, isSelected, onClick }: {
           {sign.name}
         </h3>
 
-        {/* Element Badge */}
-        <div className={`
-          inline-block px-3 py-1 rounded-full text-xs font-medium mb-3
-          bg-gradient-to-r ${sign.color} text-white
-          group-hover:scale-110 transition-transform duration-300
-        `}>
+        {/* Element */}
+        <div className="text-xs font-medium mb-3 text-astro-navy/60">
           {sign.element}
         </div>
 
