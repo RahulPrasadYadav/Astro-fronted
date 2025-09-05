@@ -1,28 +1,28 @@
-import { useState, useEffect, useRef } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
-import { Button } from './ui/button';
+import { useState, useEffect, useRef } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import { Button } from "./ui/button";
 
 const slides = [
   {
-    src: 'https://cdn.builder.io/api/v1/image/assets%2F051248bf61844be4835e51ba02d80da0%2Fc96948ad5a754f639368f49fa3c01ad1?format=webp&width=800',
-    title: 'Celestial Chronicles',
-    subtitle: 'Journey through the Cosmos'
+    src: "https://cdn.builder.io/api/v1/image/assets%2F051248bf61844be4835e51ba02d80da0%2Fc96948ad5a754f639368f49fa3c01ad1?format=webp&width=800",
+    title: "Celestial Chronicles",
+    subtitle: "Journey through the Cosmos",
   },
   {
-    src: 'https://cdn.builder.io/api/v1/image/assets%2F051248bf61844be4835e51ba02d80da0%2F6b3b9fe21f9d4e7bbd4e12dd3f2d9a7d?format=webp&width=800',
-    title: 'Ascension',
-    subtitle: 'Unlock Your Celestial Path'
+    src: "https://cdn.builder.io/api/v1/image/assets%2F051248bf61844be4835e51ba02d80da0%2F6b3b9fe21f9d4e7bbd4e12dd3f2d9a7d?format=webp&width=800",
+    title: "Ascension",
+    subtitle: "Unlock Your Celestial Path",
   },
   {
-    src: 'https://cdn.builder.io/api/v1/image/assets%2F051248bf61844be4835e51ba02d80da0%2Faac854c7aa394e289c4816f6cf939292?format=webp&width=800',
-    title: 'Cosmic Oraculum',
-    subtitle: 'Unlock the Secrets of the Universe'
+    src: "https://cdn.builder.io/api/v1/image/assets%2F051248bf61844be4835e51ba02d80da0%2Faac854c7aa394e289c4816f6cf939292?format=webp&width=800",
+    title: "Cosmic Oraculum",
+    subtitle: "Unlock the Secrets of the Universe",
   },
   {
-    src: 'https://cdn.builder.io/api/v1/image/assets%2F051248bf61844be4835e51ba02d80da0%2Fd8262e8df9fa43bd9a12d39c3b1cef00?format=webp&width=800',
-    title: 'Vedic Astrology',
-    subtitle: 'Ancient Wisdom for Modern Life'
-  }
+    src: "https://cdn.builder.io/api/v1/image/assets%2F051248bf61844be4835e51ba02d80da0%2Fd8262e8df9fa43bd9a12d39c3b1cef00?format=webp&width=800",
+    title: "Vedic Astrology",
+    subtitle: "Ancient Wisdom for Modern Life",
+  },
 ];
 
 const HolographicAvatar = () => {
@@ -32,14 +32,14 @@ const HolographicAvatar = () => {
 
   useEffect(() => {
     const spin = setInterval(() => {
-      setRotationAngle(prev => (prev + 1) % 360);
+      setRotationAngle((prev) => (prev + 1) % 360);
     }, 50);
     return () => clearInterval(spin);
   }, []);
 
   useEffect(() => {
     const id = setInterval(() => {
-      if (!hoverRef.current) setIndex(i => (i + 1) % slides.length);
+      if (!hoverRef.current) setIndex((i) => (i + 1) % slides.length);
     }, 2000);
     return () => clearInterval(id);
   }, []);
@@ -55,11 +55,11 @@ const HolographicAvatar = () => {
         {slides.map((s, i) => (
           <div
             key={s.src}
-            className={`absolute inset-0 transition-all duration-700 ease-out ${i === index ? 'opacity-70 scale-100' : 'opacity-0 scale-105'}`}
+            className={`absolute inset-0 transition-all duration-700 ease-out ${i === index ? "opacity-70 scale-100" : "opacity-0 scale-105"}`}
             style={{
               backgroundImage: `url(${s.src})`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
+              backgroundSize: "cover",
+              backgroundPosition: "center",
             }}
           />
         ))}
@@ -81,7 +81,7 @@ const HolographicAvatar = () => {
               top: `${Math.random() * 100}%`,
               animationDelay: `${Math.random() * 3}s`,
               animationDuration: `${2 + Math.random() * 3}s`,
-              opacity: Math.random() * 0.8 + 0.2
+              opacity: Math.random() * 0.8 + 0.2,
             }}
           />
         ))}
@@ -97,7 +97,7 @@ const HolographicAvatar = () => {
             left: `${Math.random() * 80 + 10}%`,
             top: `${Math.random() * 80 + 10}%`,
             animationDelay: `${i * 2}s`,
-            animationDuration: '6s'
+            animationDuration: "6s",
           }}
         />
       ))}
@@ -113,9 +113,15 @@ const HolographicAvatar = () => {
                 {/* Constellation Pattern */}
                 <div className="absolute inset-0">
                   {[
-                    { x: 20, y: 30 }, { x: 80, y: 25 }, { x: 50, y: 15 },
-                    { x: 30, y: 60 }, { x: 70, y: 55 }, { x: 50, y: 70 },
-                    { x: 15, y: 80 }, { x: 85, y: 85 }, { x: 50, y: 90 }
+                    { x: 20, y: 30 },
+                    { x: 80, y: 25 },
+                    { x: 50, y: 15 },
+                    { x: 30, y: 60 },
+                    { x: 70, y: 55 },
+                    { x: 50, y: 70 },
+                    { x: 15, y: 80 },
+                    { x: 85, y: 85 },
+                    { x: 50, y: 90 },
                   ].map((point, index) => (
                     <div
                       key={index}
@@ -124,16 +130,25 @@ const HolographicAvatar = () => {
                         left: `${point.x}%`,
                         top: `${point.y}%`,
                         animationDelay: `${index * 0.3}s`,
-                        boxShadow: '0 0 10px rgba(255, 215, 0, 0.8)'
+                        boxShadow: "0 0 10px rgba(255, 215, 0, 0.8)",
                       }}
                     />
                   ))}
                   <svg className="absolute inset-0 w-full h-full">
                     <defs>
-                      <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <linearGradient
+                        id="lineGradient"
+                        x1="0%"
+                        y1="0%"
+                        x2="100%"
+                        y2="100%"
+                      >
                         <stop offset="0%" stopColor="rgba(255, 215, 0, 0.6)" />
                         <stop offset="50%" stopColor="rgba(255, 215, 0, 0.3)" />
-                        <stop offset="100%" stopColor="rgba(255, 215, 0, 0.6)" />
+                        <stop
+                          offset="100%"
+                          stopColor="rgba(255, 215, 0, 0.6)"
+                        />
                       </linearGradient>
                     </defs>
                     <path
@@ -154,7 +169,10 @@ const HolographicAvatar = () => {
                 </div>
 
                 {/* Energy Aura */}
-                <div className="absolute inset-0 rounded-full bg-gradient-to-br from-astro-gold/10 via-transparent to-purple-500/10 animate-pulse" style={{ animationDuration: '4s' }} />
+                <div
+                  className="absolute inset-0 rounded-full bg-gradient-to-br from-astro-gold/10 via-transparent to-purple-500/10 animate-pulse"
+                  style={{ animationDuration: "4s" }}
+                />
               </div>
 
               {/* Extended Hands with Solar System */}
@@ -187,9 +205,9 @@ const HolographicAvatar = () => {
                           style={{
                             left: `calc(50% + ${x}px)`,
                             top: `calc(50% + ${y}px)`,
-                            transform: 'translate(-50%, -50%)',
+                            transform: "translate(-50%, -50%)",
                             animationDelay: `${index * 0.2}s`,
-                            boxShadow: '0 0 6px rgba(255, 215, 0, 0.8)'
+                            boxShadow: "0 0 6px rgba(255, 215, 0, 0.8)",
                           }}
                         />
                       );
@@ -215,7 +233,7 @@ const HolographicAvatar = () => {
                   left: `${45 + Math.random() * 10}%`,
                   top: `${30 + Math.random() * 40}%`,
                   animationDelay: `${Math.random() * 3}s`,
-                  animationDuration: `${3 + Math.random() * 2}s`
+                  animationDuration: `${3 + Math.random() * 2}s`,
                 }}
               />
             ))}
@@ -234,9 +252,12 @@ const HolographicAvatar = () => {
               className="space-y-6"
             >
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold leading-tight">
-                <span className="text-white">{slides[index].title.split(' ')[0]} </span>
+                <span className="text-white">
+                  {slides[index].title.split(" ")[0]}{" "}
+                </span>
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-astro-gold via-amber-300 to-astro-gold animate-pulse">
-                  {slides[index].title.split(' ').slice(1).join(' ') || slides[index].title}
+                  {slides[index].title.split(" ").slice(1).join(" ") ||
+                    slides[index].title}
                 </span>
               </h1>
               <p className="text-xl md:text-2xl text-astro-gold/90 max-w-4xl mx-auto leading-relaxed font-light">
@@ -268,7 +289,7 @@ const HolographicAvatar = () => {
               <button
                 key={i}
                 onClick={() => setIndex(i)}
-                className={`w-2.5 h-2.5 rounded-full transition-all ${i === index ? 'bg-astro-gold scale-125 shadow' : 'bg-white/60 hover:bg-white'}`}
+                className={`w-2.5 h-2.5 rounded-full transition-all ${i === index ? "bg-astro-gold scale-125 shadow" : "bg-white/60 hover:bg-white"}`}
                 aria-label={`Go to slide ${i + 1}`}
               />
             ))}

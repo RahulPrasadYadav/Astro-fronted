@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { ChevronDown, HelpCircle, Star } from 'lucide-react';
+import { useState } from "react";
+import { ChevronDown, HelpCircle, Star } from "lucide-react";
 
 interface FAQItem {
   id: string;
@@ -10,71 +10,85 @@ interface FAQItem {
 
 const faqData: FAQItem[] = [
   {
-    id: '1',
-    question: 'How accurate are astrology readings?',
-    answer: 'Our expert astrologers provide highly accurate readings based on precise birth chart calculations and years of experience. Accuracy depends on the exactness of your birth time and location. Many clients report 85-95% accuracy in our predictions.',
-    category: 'General'
+    id: "1",
+    question: "How accurate are astrology readings?",
+    answer:
+      "Our expert astrologers provide highly accurate readings based on precise birth chart calculations and years of experience. Accuracy depends on the exactness of your birth time and location. Many clients report 85-95% accuracy in our predictions.",
+    category: "General",
   },
   {
-    id: '2',
-    question: 'What information do I need for a reading?',
-    answer: 'For the most accurate reading, you need your exact birth date, time (preferably to the minute), and place of birth. If you don\'t know your exact birth time, our astrologers can still provide valuable insights using other techniques.',
-    category: 'General'
+    id: "2",
+    question: "What information do I need for a reading?",
+    answer:
+      "For the most accurate reading, you need your exact birth date, time (preferably to the minute), and place of birth. If you don't know your exact birth time, our astrologers can still provide valuable insights using other techniques.",
+    category: "General",
   },
   {
-    id: '3',
-    question: 'How does online astrology consultation work?',
-    answer: 'You can connect with our astrologers through video calls, phone calls, or chat. Simply choose your preferred astrologer, select a time slot, and provide your birth details. The session includes personalized insights and remedies based on your birth chart.',
-    category: 'Services'
+    id: "3",
+    question: "How does online astrology consultation work?",
+    answer:
+      "You can connect with our astrologers through video calls, phone calls, or chat. Simply choose your preferred astrologer, select a time slot, and provide your birth details. The session includes personalized insights and remedies based on your birth chart.",
+    category: "Services",
   },
   {
-    id: '4',
-    question: 'What is the difference between Vedic and Western astrology?',
-    answer: 'Vedic astrology uses the sidereal zodiac and focuses on karma and dharma, while Western astrology uses the tropical zodiac and emphasizes psychological traits. Our platform offers both systems, and our astrologers will recommend the best approach for you.',
-    category: 'General'
+    id: "4",
+    question: "What is the difference between Vedic and Western astrology?",
+    answer:
+      "Vedic astrology uses the sidereal zodiac and focuses on karma and dharma, while Western astrology uses the tropical zodiac and emphasizes psychological traits. Our platform offers both systems, and our astrologers will recommend the best approach for you.",
+    category: "General",
   },
   {
-    id: '5',
-    question: 'Can astrology predict the future?',
-    answer: 'Astrology reveals potential trends and possibilities based on planetary movements and your birth chart. It shows favorable and challenging periods, helping you make informed decisions. Think of it as a cosmic weather forecast for your life.',
-    category: 'General'
+    id: "5",
+    question: "Can astrology predict the future?",
+    answer:
+      "Astrology reveals potential trends and possibilities based on planetary movements and your birth chart. It shows favorable and challenging periods, helping you make informed decisions. Think of it as a cosmic weather forecast for your life.",
+    category: "General",
   },
   {
-    id: '6',
-    question: 'How often should I get an astrology reading?',
-    answer: 'For general guidance, annual readings are common. However, you might want more frequent consultations during major life transitions, important decisions, or challenging periods. Our astrologers can suggest the best timing for follow-up sessions.',
-    category: 'Services'
+    id: "6",
+    question: "How often should I get an astrology reading?",
+    answer:
+      "For general guidance, annual readings are common. However, you might want more frequent consultations during major life transitions, important decisions, or challenging periods. Our astrologers can suggest the best timing for follow-up sessions.",
+    category: "Services",
   },
   {
-    id: '7',
-    question: 'Is matchmaking through astrology reliable?',
-    answer: 'Astrological matchmaking analyzes compatibility through birth charts, examining factors like guna matching, mangal dosha, and planetary compatibility. While it provides valuable insights, successful relationships also depend on understanding, communication, and mutual respect.',
-    category: 'Matchmaking'
+    id: "7",
+    question: "Is matchmaking through astrology reliable?",
+    answer:
+      "Astrological matchmaking analyzes compatibility through birth charts, examining factors like guna matching, mangal dosha, and planetary compatibility. While it provides valuable insights, successful relationships also depend on understanding, communication, and mutual respect.",
+    category: "Matchmaking",
   },
   {
-    id: '8',
-    question: 'What are astrological remedies and do they work?',
-    answer: 'Astrological remedies include gemstones, mantras, rituals, and lifestyle changes designed to balance planetary energies. Many clients report positive changes, though results vary by individual belief, consistency in practice, and the specific remedy prescribed.',
-    category: 'Remedies'
+    id: "8",
+    question: "What are astrological remedies and do they work?",
+    answer:
+      "Astrological remedies include gemstones, mantras, rituals, and lifestyle changes designed to balance planetary energies. Many clients report positive changes, though results vary by individual belief, consistency in practice, and the specific remedy prescribed.",
+    category: "Remedies",
   },
   {
-    id: '9',
-    question: 'How do I choose the right astrologer?',
-    answer: 'Consider the astrologer\'s specialization (Vedic, Western, KP, etc.), experience, client reviews, and areas of expertise. Our platform displays each astrologer\'s qualifications, specialties, and client ratings to help you make the best choice.',
-    category: 'Services'
+    id: "9",
+    question: "How do I choose the right astrologer?",
+    answer:
+      "Consider the astrologer's specialization (Vedic, Western, KP, etc.), experience, client reviews, and areas of expertise. Our platform displays each astrologer's qualifications, specialties, and client ratings to help you make the best choice.",
+    category: "Services",
   },
   {
-    id: '10',
-    question: 'Are your astrologers verified and qualified?',
-    answer: 'Yes, all our astrologers undergo a rigorous verification process. We check their educational background, years of practice, and expertise through practical assessments. Only qualified professionals with proven track records join our platform.',
-    category: 'Services'
-  }
+    id: "10",
+    question: "Are your astrologers verified and qualified?",
+    answer:
+      "Yes, all our astrologers undergo a rigorous verification process. We check their educational background, years of practice, and expertise through practical assessments. Only qualified professionals with proven track records join our platform.",
+    category: "Services",
+  },
 ];
 
-const FAQAccordion = ({ item, isOpen, onToggle }: { 
-  item: FAQItem; 
-  isOpen: boolean; 
-  onToggle: () => void; 
+const FAQAccordion = ({
+  item,
+  isOpen,
+  onToggle,
+}: {
+  item: FAQItem;
+  isOpen: boolean;
+  onToggle: () => void;
 }) => {
   return (
     <div className="border border-astro-gold/20 rounded-2xl bg-white/80 backdrop-blur-sm hover:shadow-lg hover:shadow-astro-gold/20 transition-all duration-300">
@@ -85,24 +99,26 @@ const FAQAccordion = ({ item, isOpen, onToggle }: {
         <h3 className="text-lg font-semibold text-astro-navy group-hover:text-astro-orange transition-colors pr-4">
           {item.question}
         </h3>
-        <div className={`
+        <div
+          className={`
           flex-shrink-0 w-8 h-8 bg-gradient-to-br from-astro-gold to-astro-gold-dark rounded-full 
           flex items-center justify-center transform transition-transform duration-300
-          ${isOpen ? 'rotate-180' : ''}
-        `}>
+          ${isOpen ? "rotate-180" : ""}
+        `}
+        >
           <ChevronDown className="w-5 h-5 text-astro-navy" />
         </div>
       </button>
-      
-      <div className={`
+
+      <div
+        className={`
         overflow-hidden transition-all duration-500 ease-in-out
-        ${isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}
-      `}>
+        ${isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"}
+      `}
+      >
         <div className="px-6 pb-5">
           <div className="w-full h-px bg-gradient-to-r from-transparent via-astro-gold/30 to-transparent mb-4" />
-          <p className="text-astro-navy/80 leading-relaxed">
-            {item.answer}
-          </p>
+          <p className="text-astro-navy/80 leading-relaxed">{item.answer}</p>
           <div className="mt-3">
             <span className="inline-block px-3 py-1 bg-astro-gold/20 text-astro-navy text-xs rounded-full border border-astro-gold/30">
               {item.category}
@@ -127,12 +143,13 @@ const FAQ = () => {
     setOpenItems(newOpenItems);
   };
 
-  const categories = ['All', 'General', 'Services', 'Matchmaking', 'Remedies'];
-  const [selectedCategory, setSelectedCategory] = useState('All');
+  const categories = ["All", "General", "Services", "Matchmaking", "Remedies"];
+  const [selectedCategory, setSelectedCategory] = useState("All");
 
-  const filteredFAQs = selectedCategory === 'All' 
-    ? faqData 
-    : faqData.filter(item => item.category === selectedCategory);
+  const filteredFAQs =
+    selectedCategory === "All"
+      ? faqData
+      : faqData.filter((item) => item.category === selectedCategory);
 
   return (
     <section className="py-16 bg-gradient-to-b from-astro-gold/5 to-white relative overflow-hidden">
@@ -146,7 +163,7 @@ const FAQ = () => {
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
               animationDelay: `${Math.random() * 3}s`,
-              animationDuration: `${3 + Math.random() * 2}s`
+              animationDuration: `${3 + Math.random() * 2}s`,
             }}
           />
         ))}
@@ -159,14 +176,15 @@ const FAQ = () => {
             <HelpCircle className="w-8 h-8 text-astro-navy" />
           </div>
           <h2 className="text-4xl md:text-5xl font-display font-bold text-astro-navy mb-4">
-            Frequently Asked{' '}
+            Frequently Asked{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-astro-orange to-astro-orange-dark">
               Questions
             </span>
           </h2>
           <p className="text-lg text-astro-navy/70 max-w-2xl mx-auto">
-            Find answers to common questions about astrology, our services, and how we can guide you 
-            on your cosmic journey. Still have questions? Feel free to contact our experts.
+            Find answers to common questions about astrology, our services, and
+            how we can guide you on your cosmic journey. Still have questions?
+            Feel free to contact our experts.
           </p>
         </div>
 
@@ -178,9 +196,10 @@ const FAQ = () => {
               onClick={() => setSelectedCategory(category)}
               className={`
                 px-6 py-2 rounded-full font-medium transition-all duration-300 transform hover:scale-105
-                ${selectedCategory === category
-                  ? 'bg-gradient-to-r from-astro-gold to-astro-gold-dark text-astro-navy shadow-lg'
-                  : 'bg-white/80 text-astro-navy border border-astro-gold/30 hover:bg-astro-gold/20'
+                ${
+                  selectedCategory === category
+                    ? "bg-gradient-to-r from-astro-gold to-astro-gold-dark text-astro-navy shadow-lg"
+                    : "bg-white/80 text-astro-navy border border-astro-gold/30 hover:bg-astro-gold/20"
                 }
               `}
             >
@@ -209,11 +228,12 @@ const FAQ = () => {
               Still Have Questions?
             </h3>
             <p className="text-astro-navy/70 mb-6 max-w-lg mx-auto">
-              Our expert astrologers are here to help. Get personalized answers to your specific questions 
-              about your cosmic journey and spiritual path.
+              Our expert astrologers are here to help. Get personalized answers
+              to your specific questions about your cosmic journey and spiritual
+              path.
             </p>
           </div>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="px-8 py-3 bg-gradient-to-r from-astro-gold to-astro-gold-dark text-astro-navy rounded-lg font-medium hover:shadow-lg hover:shadow-astro-gold/30 transition-all duration-300">
               Talk to an Astrologer

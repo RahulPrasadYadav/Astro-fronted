@@ -1,18 +1,27 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Menu, X, Calendar, Heart, Eye, Hand, Sparkles, BookOpen } from 'lucide-react';
-import { Button } from './ui/button';
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import {
+  Menu,
+  X,
+  Calendar,
+  Heart,
+  Eye,
+  Hand,
+  Sparkles,
+  BookOpen,
+} from "lucide-react";
+import { Button } from "./ui/button";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navigationItems = [
-    { name: 'Kundali', path: '/kundali', icon: Star },
-    { name: 'Matchmaking', path: '/matchmaking', icon: Heart },
-    { name: 'Horoscope', path: '/horoscope', icon: Calendar },
-    { name: 'Palm Reading', path: '/palm-reading', icon: Hand },
-    { name: 'Face Reading', path: '/face-reading', icon: Eye },
-    { name: 'News & Blog', path: '/blog', icon: BookOpen },
+    { name: "Kundali", path: "/kundali", icon: Star },
+    { name: "Matchmaking", path: "/matchmaking", icon: Heart },
+    { name: "Horoscope", path: "/horoscope", icon: Calendar },
+    { name: "Palm Reading", path: "/palm-reading", icon: Hand },
+    { name: "Face Reading", path: "/face-reading", icon: Eye },
+    { name: "News & Blog", path: "/blog", icon: BookOpen },
   ];
 
   return (
@@ -20,7 +29,11 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative h-16 flex items-center lg:grid lg:grid-cols-[auto_1fr_auto]">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2 lg:justify-self-start" aria-label="AstroXpert Home">
+          <Link
+            to="/"
+            className="flex items-center space-x-2 lg:justify-self-start"
+            aria-label="AstroXpert Home"
+          >
             <div className="relative w-9 h-9 bg-gradient-to-br from-astro-gold to-astro-gold-dark rounded-full flex items-center justify-center shadow-inner">
               {/* Zodiac wheel dots */}
               {[...Array(12)].map((_, i) => (
@@ -28,10 +41,10 @@ const Navigation = () => {
                   key={i}
                   className="absolute w-1 h-1 bg-astro-navy rounded-full"
                   style={{
-                    left: '50%',
-                    top: '50%',
+                    left: "50%",
+                    top: "50%",
                     transform: `translate(-50%, -50%) rotate(${i * 30}deg) translateX(12px)`,
-                    opacity: 0.9
+                    opacity: 0.9,
                   }}
                 />
               ))}

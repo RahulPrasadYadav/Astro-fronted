@@ -1,5 +1,5 @@
-import { Calendar, Clock, ArrowRight, User } from 'lucide-react';
-import { Button } from './ui/button';
+import { Calendar, Clock, ArrowRight, User } from "lucide-react";
+import { Button } from "./ui/button";
 
 interface BlogPost {
   id: string;
@@ -16,48 +16,64 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
-    id: '1',
-    title: 'Mercury Retrograde 2024: What to Expect and How to Navigate',
-    excerpt: 'Learn how Mercury retrograde affects communication, technology, and travel. Discover practical tips to minimize disruptions and maximize opportunities during this cosmic event.',
-    image: 'https://images.unsplash.com/photo-1502134249126-9f3755a50d78?w=600&h=400&fit=crop',
-    author: 'Dr. Priya Sharma',
-    authorImage: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=50&h=50&fit=crop&crop=face',
-    publishDate: '2024-01-15',
-    readTime: '8 min read',
-    category: 'Planetary Transit',
-    tags: ['Mercury Retrograde', 'Astrology', 'Predictions']
+    id: "1",
+    title: "Mercury Retrograde 2024: What to Expect and How to Navigate",
+    excerpt:
+      "Learn how Mercury retrograde affects communication, technology, and travel. Discover practical tips to minimize disruptions and maximize opportunities during this cosmic event.",
+    image:
+      "https://images.unsplash.com/photo-1502134249126-9f3755a50d78?w=600&h=400&fit=crop",
+    author: "Dr. Priya Sharma",
+    authorImage:
+      "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=50&h=50&fit=crop&crop=face",
+    publishDate: "2024-01-15",
+    readTime: "8 min read",
+    category: "Planetary Transit",
+    tags: ["Mercury Retrograde", "Astrology", "Predictions"],
   },
   {
-    id: '2',
-    title: 'The Power of Gemstones: Ancient Remedies for Modern Problems',
-    excerpt: 'Explore the healing properties of gemstones and how they can enhance your life. From Ruby to Emerald, discover which stones align with your zodiac sign.',
-    image: 'https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=600&h=400&fit=crop',
-    author: 'Pandit Rajesh Kumar',
-    authorImage: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=50&h=50&fit=crop&crop=face',
-    publishDate: '2024-01-12',
-    readTime: '6 min read',
-    category: 'Remedies',
-    tags: ['Gemstones', 'Healing', 'Remedies']
+    id: "2",
+    title: "The Power of Gemstones: Ancient Remedies for Modern Problems",
+    excerpt:
+      "Explore the healing properties of gemstones and how they can enhance your life. From Ruby to Emerald, discover which stones align with your zodiac sign.",
+    image:
+      "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=600&h=400&fit=crop",
+    author: "Pandit Rajesh Kumar",
+    authorImage:
+      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=50&h=50&fit=crop&crop=face",
+    publishDate: "2024-01-12",
+    readTime: "6 min read",
+    category: "Remedies",
+    tags: ["Gemstones", "Healing", "Remedies"],
   },
   {
-    id: '3',
-    title: 'Understanding Your Birth Chart: A Beginner\'s Guide to Self-Discovery',
-    excerpt: 'Decode the secrets hidden in your birth chart. Learn about houses, planets, and aspects that shape your personality and life path.',
-    image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=400&fit=crop',
-    author: 'Dr. Meera Patel',
-    authorImage: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=50&h=50&fit=crop&crop=face',
-    publishDate: '2024-01-10',
-    readTime: '12 min read',
-    category: 'Astrology Basics',
-    tags: ['Birth Chart', 'Beginner', 'Self-Discovery']
-  }
+    id: "3",
+    title:
+      "Understanding Your Birth Chart: A Beginner's Guide to Self-Discovery",
+    excerpt:
+      "Decode the secrets hidden in your birth chart. Learn about houses, planets, and aspects that shape your personality and life path.",
+    image:
+      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=400&fit=crop",
+    author: "Dr. Meera Patel",
+    authorImage:
+      "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=50&h=50&fit=crop&crop=face",
+    publishDate: "2024-01-10",
+    readTime: "12 min read",
+    category: "Astrology Basics",
+    tags: ["Birth Chart", "Beginner", "Self-Discovery"],
+  },
 ];
 
-const BlogCard = ({ post, featured = false }: { post: BlogPost; featured?: boolean }) => {
-  const formattedDate = new Date(post.publishDate).toLocaleDateString('en-US', {
-    month: 'long',
-    day: 'numeric',
-    year: 'numeric'
+const BlogCard = ({
+  post,
+  featured = false,
+}: {
+  post: BlogPost;
+  featured?: boolean;
+}) => {
+  const formattedDate = new Date(post.publishDate).toLocaleDateString("en-US", {
+    month: "long",
+    day: "numeric",
+    year: "numeric",
   });
 
   if (featured) {
@@ -78,7 +94,7 @@ const BlogCard = ({ post, featured = false }: { post: BlogPost; featured?: boole
                 </span>
               </div>
             </div>
-            
+
             {/* Content */}
             <div className="p-8 flex flex-col justify-between">
               <div>
@@ -89,7 +105,7 @@ const BlogCard = ({ post, featured = false }: { post: BlogPost; featured?: boole
                   {post.excerpt}
                 </p>
               </div>
-              
+
               <div>
                 {/* Tags */}
                 <div className="flex flex-wrap gap-2 mb-4">
@@ -102,7 +118,7 @@ const BlogCard = ({ post, featured = false }: { post: BlogPost; featured?: boole
                     </span>
                   ))}
                 </div>
-                
+
                 {/* Meta */}
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-3">
@@ -112,7 +128,9 @@ const BlogCard = ({ post, featured = false }: { post: BlogPost; featured?: boole
                       className="w-8 h-8 rounded-full border border-astro-gold/30"
                     />
                     <div>
-                      <p className="text-astro-navy font-medium text-sm">{post.author}</p>
+                      <p className="text-astro-navy font-medium text-sm">
+                        {post.author}
+                      </p>
                       <div className="flex items-center space-x-3 text-astro-navy/60 text-xs">
                         <div className="flex items-center space-x-1">
                           <Calendar className="w-3 h-3" />
@@ -151,7 +169,7 @@ const BlogCard = ({ post, featured = false }: { post: BlogPost; featured?: boole
             </span>
           </div>
         </div>
-        
+
         {/* Content */}
         <div className="p-6">
           <h3 className="text-lg font-display font-bold text-astro-navy mb-3 group-hover:text-astro-orange transition-colors line-clamp-2">
@@ -160,7 +178,7 @@ const BlogCard = ({ post, featured = false }: { post: BlogPost; featured?: boole
           <p className="text-astro-navy/70 text-sm mb-4 line-clamp-3">
             {post.excerpt}
           </p>
-          
+
           {/* Meta */}
           <div className="flex items-center space-x-3 mb-3">
             <img
@@ -168,9 +186,11 @@ const BlogCard = ({ post, featured = false }: { post: BlogPost; featured?: boole
               alt={post.author}
               className="w-6 h-6 rounded-full border border-astro-gold/30"
             />
-            <span className="text-astro-navy font-medium text-sm">{post.author}</span>
+            <span className="text-astro-navy font-medium text-sm">
+              {post.author}
+            </span>
           </div>
-          
+
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3 text-astro-navy/60 text-xs">
               <div className="flex items-center space-x-1">
@@ -197,14 +217,15 @@ const BlogPreview = () => {
         {/* Section Header */}
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-display font-bold text-astro-navy mb-4">
-            Latest from Our{' '}
+            Latest from Our{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-astro-orange to-astro-orange-dark">
               Cosmic Blog
             </span>
           </h2>
           <p className="text-lg text-astro-navy/70 max-w-2xl mx-auto">
-            Stay updated with the latest astrological insights, predictions, and wisdom from our expert astrologers.
-            Explore articles that guide you through life's cosmic mysteries.
+            Stay updated with the latest astrological insights, predictions, and
+            wisdom from our expert astrologers. Explore articles that guide you
+            through life's cosmic mysteries.
           </p>
         </div>
 
@@ -223,8 +244,8 @@ const BlogPreview = () => {
             Stay Connected to the Cosmos
           </h3>
           <p className="text-astro-navy/70 mb-6 max-w-xl mx-auto">
-            Subscribe to our newsletter and receive weekly horoscopes, astrological insights, 
-            and exclusive content directly in your inbox.
+            Subscribe to our newsletter and receive weekly horoscopes,
+            astrological insights, and exclusive content directly in your inbox.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
             <input

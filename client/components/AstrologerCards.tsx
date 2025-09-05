@@ -1,5 +1,5 @@
-import { Star, Clock, MessageCircle } from 'lucide-react';
-import { Button } from './ui/button';
+import { Star, Clock, MessageCircle } from "lucide-react";
+import { Button } from "./ui/button";
 
 interface Astrologer {
   id: string;
@@ -16,77 +16,83 @@ interface Astrologer {
 
 const astrologers: Astrologer[] = [
   {
-    id: '1',
-    name: 'Dr. Priya Sharma',
-    image: 'https://images.unsplash.com/photo-1594736797933-d0301ba6fe65?w=200&h=200&fit=crop&crop=face',
-    specialties: ['Vedic Astrology', 'Love & Relationships', 'Career'],
+    id: "1",
+    name: "Dr. Priya Sharma",
+    image:
+      "https://images.unsplash.com/photo-1594736797933-d0301ba6fe65?w=200&h=200&fit=crop&crop=face",
+    specialties: ["Vedic Astrology", "Love & Relationships", "Career"],
     rating: 4.9,
     reviews: 2341,
     pricePerMin: 4.99,
-    experience: '15+ years',
+    experience: "15+ years",
     isOnline: true,
-    responseTime: '2 min'
+    responseTime: "2 min",
   },
   {
-    id: '2',
-    name: 'Pandit Rajesh Kumar',
-    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&crop=face',
-    specialties: ['Numerology', 'Marriage', 'Business'],
+    id: "2",
+    name: "Pandit Rajesh Kumar",
+    image:
+      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&crop=face",
+    specialties: ["Numerology", "Marriage", "Business"],
     rating: 4.8,
     reviews: 1876,
     pricePerMin: 6.99,
-    experience: '20+ years',
+    experience: "20+ years",
     isOnline: true,
-    responseTime: '1 min'
+    responseTime: "1 min",
   },
   {
-    id: '3',
-    name: 'Dr. Meera Patel',
-    image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=200&h=200&fit=crop&crop=face',
-    specialties: ['Tarot Reading', 'Spiritual Healing', 'Life Path'],
+    id: "3",
+    name: "Dr. Meera Patel",
+    image:
+      "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=200&h=200&fit=crop&crop=face",
+    specialties: ["Tarot Reading", "Spiritual Healing", "Life Path"],
     rating: 4.9,
     reviews: 3102,
     pricePerMin: 5.99,
-    experience: '12+ years',
+    experience: "12+ years",
     isOnline: false,
-    responseTime: '5 min'
+    responseTime: "5 min",
   },
   {
-    id: '4',
-    name: 'Acharya Vikram Singh',
-    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop&crop=face',
-    specialties: ['Vedic Astrology', 'Gemstone', 'Remedies'],
+    id: "4",
+    name: "Acharya Vikram Singh",
+    image:
+      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop&crop=face",
+    specialties: ["Vedic Astrology", "Gemstone", "Remedies"],
     rating: 4.7,
     reviews: 987,
     pricePerMin: 7.99,
-    experience: '25+ years',
+    experience: "25+ years",
     isOnline: true,
-    responseTime: '3 min'
+    responseTime: "3 min",
   },
   {
-    id: '5',
-    name: 'Dr. Anjali Gupta',
-    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&h=200&fit=crop&crop=face',
-    specialties: ['Palm Reading', 'Health', 'Family'],
+    id: "5",
+    name: "Dr. Anjali Gupta",
+    image:
+      "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&h=200&fit=crop&crop=face",
+    specialties: ["Palm Reading", "Health", "Family"],
     rating: 4.8,
     reviews: 1543,
     pricePerMin: 4.99,
-    experience: '10+ years',
+    experience: "10+ years",
     isOnline: true,
-    responseTime: '2 min'
+    responseTime: "2 min",
   },
   {
-    id: '6',
-    name: 'Pandit Suresh Joshi',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face',
-    specialties: ['KP Astrology', 'Finance', 'Legal Issues'],
+    id: "6",
+    name: "Pandit Suresh Joshi",
+    image:
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face",
+    specialties: ["KP Astrology", "Finance", "Legal Issues"],
     rating: 4.9,
     reviews: 2654,
     pricePerMin: 8.99,
-    experience: '18+ years',
+    experience: "18+ years",
     isOnline: false,
-    responseTime: '10 min'
-  }
+    responseTime: "10 min",
+  },
 ];
 
 const AstrologerCard = ({ astrologer }: { astrologer: Astrologer }) => {
@@ -95,15 +101,17 @@ const AstrologerCard = ({ astrologer }: { astrologer: Astrologer }) => {
       {/* Header with Online Status */}
       <div className="relative">
         <div className="absolute top-4 right-4 z-10">
-          <div className={`px-3 py-1 rounded-full text-xs font-medium ${
-            astrologer.isOnline 
-              ? 'bg-green-100 text-green-800 border border-green-200' 
-              : 'bg-gray-100 text-gray-600 border border-gray-200'
-          }`}>
-            {astrologer.isOnline ? 'Online' : 'Offline'}
+          <div
+            className={`px-3 py-1 rounded-full text-xs font-medium ${
+              astrologer.isOnline
+                ? "bg-green-100 text-green-800 border border-green-200"
+                : "bg-gray-100 text-gray-600 border border-gray-200"
+            }`}
+          >
+            {astrologer.isOnline ? "Online" : "Offline"}
           </div>
         </div>
-        
+
         {/* Avatar */}
         <div className="flex justify-center pt-6">
           <div className="relative">
@@ -128,7 +136,9 @@ const AstrologerCard = ({ astrologer }: { astrologer: Astrologer }) => {
           <h3 className="text-xl font-display font-semibold text-astro-navy mb-1">
             {astrologer.name}
           </h3>
-          <p className="text-astro-navy/60 text-sm">{astrologer.experience} Experience</p>
+          <p className="text-astro-navy/60 text-sm">
+            {astrologer.experience} Experience
+          </p>
         </div>
 
         {/* Specialties */}
@@ -151,13 +161,15 @@ const AstrologerCard = ({ astrologer }: { astrologer: Astrologer }) => {
                 key={i}
                 className={`w-4 h-4 ${
                   i < Math.floor(astrologer.rating)
-                    ? 'text-astro-gold fill-current'
-                    : 'text-gray-300'
+                    ? "text-astro-gold fill-current"
+                    : "text-gray-300"
                 }`}
               />
             ))}
           </div>
-          <span className="text-astro-navy font-medium">{astrologer.rating}</span>
+          <span className="text-astro-navy font-medium">
+            {astrologer.rating}
+          </span>
           <span className="text-astro-navy/60 text-sm">
             ({astrologer.reviews.toLocaleString()} reviews)
           </span>
@@ -174,7 +186,9 @@ const AstrologerCard = ({ astrologer }: { astrologer: Astrologer }) => {
           <div className="text-center">
             <div className="flex items-center space-x-1 text-astro-navy">
               <Clock className="w-4 h-4" />
-              <span className="text-sm font-medium">{astrologer.responseTime}</span>
+              <span className="text-sm font-medium">
+                {astrologer.responseTime}
+              </span>
             </div>
             <div className="text-xs text-astro-navy/60">avg response</div>
           </div>
@@ -209,15 +223,16 @@ const AstrologerCards = () => {
         {/* Section Header */}
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-display font-bold text-astro-navy mb-4">
-            Consult The Right{' '}
+            Consult The Right{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-astro-orange to-astro-orange-dark">
               Astrologer
-            </span>{' '}
+            </span>{" "}
             For You
           </h2>
           <p className="text-lg text-astro-navy/70 max-w-2xl mx-auto">
-            Connect with our verified expert astrologers who specialize in various aspects of life
-            and provide personalized guidance based on ancient wisdom.
+            Connect with our verified expert astrologers who specialize in
+            various aspects of life and provide personalized guidance based on
+            ancient wisdom.
           </p>
         </div>
 
