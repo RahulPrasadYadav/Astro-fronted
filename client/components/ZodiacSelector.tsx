@@ -175,15 +175,6 @@ const ZodiacCard = ({ sign, isSelected, onClick }: {
           {sign.name}
         </h3>
 
-        {/* Element */}
-        <div className="text-xs font-medium mb-3 text-astro-navy/60">
-          {sign.element}
-        </div>
-
-        {/* Description */}
-        <p className="text-xs text-astro-navy/60 leading-relaxed">
-          {sign.description}
-        </p>
 
         {/* Selection Indicator */}
         {isSelected && (
@@ -262,9 +253,6 @@ const ZodiacSelector = () => {
                     <h3 className="text-3xl font-display font-bold text-astro-navy">
                       {selectedZodiac}
                     </h3>
-                    <p className="text-astro-navy/70">
-                      {zodiacSigns.find(sign => sign.name === selectedZodiac)?.element} Element
-                    </p>
                   </div>
                 </div>
               </div>
