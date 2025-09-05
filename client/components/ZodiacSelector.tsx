@@ -9,6 +9,19 @@ interface ZodiacSign {
   description: string;
 }
 
+// Image mapping for provided zodiac sign artwork
+const signImages: Record<string, string> = {
+  Aries: 'https://cdn.builder.io/api/v1/image/assets%2F051248bf61844be4835e51ba02d80da0%2F873ea004eacc4f3f82996d9b601c9b45?format=webp&width=800',
+  Taurus: 'https://cdn.builder.io/api/v1/image/assets%2F051248bf61844be4835e51ba02d80da0%2Ff589c7d58933402795eb673ff5d9cfc0?format=webp&width=800',
+  Cancer: 'https://cdn.builder.io/api/v1/image/assets%2F051248bf61844be4835e51ba02d80da0%2Fd61ac352501440cfbfe13bfcd7dd47f0?format=webp&width=800',
+  Leo: 'https://cdn.builder.io/api/v1/image/assets%2F051248bf61844be4835e51ba02d80da0%2F8085a0c94ed44de29599f00560c2a09c?format=webp&width=800',
+  Virgo: 'https://cdn.builder.io/api/v1/image/assets%2F051248bf61844be4835e51ba02d80da0%2Fa69f183d892f474abcbad81a0b67721a?format=webp&width=800',
+  Libra: 'https://cdn.builder.io/api/v1/image/assets%2F051248bf61844be4835e51ba02d80da0%2Fa9dbf92a14d84d9d9e50d0f63a58be5c?format=webp&width=800',
+  Scorpio: 'https://cdn.builder.io/api/v1/image/assets%2F051248bf61844be4835e51ba02d80da0%2F5e26813b17f342f2a11a6d7d31cc7ae1?format=webp&width=800',
+  Sagittarius: 'https://cdn.builder.io/api/v1/image/assets%2F051248bf61844be4835e51ba02d80da0%2Fba4ba4820f8e4715974bf7038e225fc1?format=webp&width=800',
+  Capricorn: 'https://cdn.builder.io/api/v1/image/assets%2F051248bf61844be4835e51ba02d80da0%2F6dda933f76bf42a7a9d91f50a57910f7?format=webp&width=800',
+};
+
 const zodiacSigns: ZodiacSign[] = [
   {
     name: 'Aries',
@@ -108,11 +121,12 @@ const zodiacSigns: ZodiacSign[] = [
   }
 ];
 
-const ZodiacCard = ({ sign, isSelected, onClick }: { 
-  sign: ZodiacSign; 
-  isSelected: boolean; 
-  onClick: () => void; 
+const ZodiacCard = ({ sign, isSelected, onClick }: {
+  sign: ZodiacSign;
+  isSelected: boolean;
+  onClick: () => void;
 }) => {
+  const img = signImages[sign.name];
   return (
     <div
       onClick={onClick}
@@ -136,29 +150,22 @@ const ZodiacCard = ({ sign, isSelected, onClick }: {
       
       {/* Content */}
       <div className="relative z-10 p-6 text-center">
-        {/* Avatar Circle */}
-        <div className={`
-          w-20 h-20 mx-auto mb-4 rounded-full border-3 border-astro-gold/40
-          bg-gradient-to-br ${sign.color} 
-          flex items-center justify-center text-white text-3xl font-bold
-          group-hover:border-astro-gold group-hover:scale-110 group-hover:rotate-12
-          transition-all duration-500 shadow-lg
-          relative overflow-hidden
-        `}>
-          {/* Inner glow effect */}
-          <div className="absolute inset-0 bg-white/20 rounded-full animate-pulse" />
-          <div className="relative z-10 transform group-hover:scale-110 transition-transform duration-300">
-            {sign.emoji}
+        {/* Sign Artwork or Fallback */}
+        {img ? (
+          <div className="w-full h-40 md:h-44 mb-4 rounded-xl overflow-hidden shadow-lg">
+            <img src={img} alt={`${sign.name} sign`} className="w-full h-full object-cover" />
           </div>
-        </div>
+        ) : null}
 
-        {/* Zodiac Symbol */}
-        <div className={`
-          text-4xl font-bold mb-2 bg-gradient-to-r ${sign.color} bg-clip-text text-transparent
-          group-hover:scale-125 transition-transform duration-300
-        `}>
-          {sign.symbol}
-        </div>
+        {/* Zodiac Symbol (shown only when no image available) */}
+        {!img && (
+          <div className={`
+            text-4xl font-bold mb-2 bg-gradient-to-r ${sign.color} bg-clip-text text-transparent
+            group-hover:scale-125 transition-transform duration-300
+          `}>
+            {sign.symbol}
+          </div>
+        )}
 
         {/* Sign Name */}
         <h3 className="text-xl font-display font-bold text-astro-navy mb-3 group-hover:text-astro-orange transition-colors">
