@@ -139,7 +139,7 @@ const CustomerReviews = () => {
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-display font-bold text-astro-navy mb-4">
             What Our{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-astro-orange-light to-astro-orange">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-astro-orange to-astro-orange-dark">
               Clients Say
             </span>
           </h2>
