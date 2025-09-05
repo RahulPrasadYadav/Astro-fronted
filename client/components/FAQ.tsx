@@ -158,9 +158,9 @@ const FAQ = () => {
           <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-astro-gold to-astro-gold-dark rounded-full mb-6 animate-pulse">
             <HelpCircle className="w-8 h-8 text-astro-navy" />
           </div>
-          <h2 className="text-4xl md:text-5xl font-display font-bold text-astro-navy mb-4">
+          <h2 className="text-4xl md:text-5xl font-display font-bold text-astro-orange mb-4">
             Frequently Asked{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-astro-gold to-astro-gold-dark">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-astro-orange-light to-astro-orange">
               Questions
             </span>
           </h2>
