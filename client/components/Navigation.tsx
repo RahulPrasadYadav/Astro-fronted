@@ -18,9 +18,9 @@ const Navigation = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-xl border-b border-astro-gold/20 shadow-lg shadow-astro-gold/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="relative flex justify-between items-center h-16">
+        <div className="relative h-16 flex items-center lg:grid lg:grid-cols-[auto_1fr_auto]">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
+          <Link to="/" className="flex items-center space-x-2 lg:justify-self-start">
             <div className="w-8 h-8 bg-gradient-to-br from-astro-gold to-astro-gold-dark rounded-full flex items-center justify-center">
               <Star className="w-5 h-5 text-astro-navy" />
             </div>
@@ -30,12 +30,12 @@ const Navigation = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex absolute inset-0 items-center justify-center space-x-8 pointer-events-none">
+          <div className="hidden lg:flex items-center justify-center space-x-8 lg:justify-self-center">
             {navigationItems.map((item) => (
               <Link
                 key={item.name}
                 to={item.path}
-                className="text-astro-navy hover:text-astro-gold-dark transition-colors duration-200 font-medium text-sm pointer-events-auto"
+                className="text-astro-navy hover:text-astro-gold-dark transition-colors duration-200 font-medium text-sm"
               >
                 {item.name}
               </Link>
@@ -43,7 +43,7 @@ const Navigation = () => {
           </div>
 
           {/* Desktop CTA Buttons */}
-          <div className="hidden lg:flex items-center space-x-4">
+          <div className="hidden lg:flex items-center space-x-4 lg:justify-self-end">
             <Button
               variant="outline"
               className="border-astro-navy text-astro-navy hover:bg-astro-navy hover:text-white"
