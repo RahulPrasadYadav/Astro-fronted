@@ -29,6 +29,11 @@ export default {
           DEFAULT: 'hsl(var(--cosmic))',
           light: 'hsl(var(--cosmic-light))'
         },
+        'astro-orange': {
+          DEFAULT: 'hsl(var(--astro-orange))',
+          light: 'hsl(var(--astro-orange-light))',
+          dark: 'hsl(var(--astro-orange-dark))'
+        },
 
         // Original theme colors
         border: "hsl(var(--border))",
