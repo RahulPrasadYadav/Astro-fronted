@@ -100,11 +100,9 @@ const FreeServices = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-display font-bold text-astro-orange mb-4">
+          <h2 className="text-4xl md:text-5xl font-display font-bold text-astro-navy mb-4">
             Explore Our{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-astro-orange-light to-astro-orange">
-              Free Astrology Tools
-            </span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-astro-orange-light to-astro-orange">Free Astrology</span> Tools
           </h2>
           <p className="text-lg text-astro-navy/70 max-w-2xl mx-auto">
             Start your cosmic journey with our complimentary astrology services. 
