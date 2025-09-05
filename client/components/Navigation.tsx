@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, Star, Calendar, Heart, Eye, Hand, Sparkles, BookOpen } from 'lucide-react';
+import { Menu, X, Calendar, Heart, Eye, Hand, Sparkles, BookOpen } from 'lucide-react';
 import { Button } from './ui/button';
 
 const Navigation = () => {
@@ -16,16 +16,29 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-xl border-b border-astro-gold/20 shadow-lg shadow-astro-gold/10">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-xl border-b border-astro-gold/20 shadow-lg shadow-astro-gold/10 rounded-b-2xl">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative h-16 flex items-center lg:grid lg:grid-cols-[auto_1fr_auto]">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2 lg:justify-self-start">
-            <div className="w-8 h-8 bg-gradient-to-br from-astro-gold to-astro-gold-dark rounded-full flex items-center justify-center">
-              <Star className="w-5 h-5 text-astro-navy" />
+          <Link to="/" className="flex items-center space-x-2 lg:justify-self-start" aria-label="AstroXpert Home">
+            <div className="relative w-9 h-9 bg-gradient-to-br from-astro-gold to-astro-gold-dark rounded-full flex items-center justify-center shadow-inner">
+              {/* Zodiac wheel dots */}
+              {[...Array(12)].map((_, i) => (
+                <span
+                  key={i}
+                  className="absolute w-1 h-1 bg-astro-navy rounded-full"
+                  style={{
+                    left: '50%',
+                    top: '50%',
+                    transform: `translate(-50%, -50%) rotate(${i * 30}deg) translateX(12px)`,
+                    opacity: 0.9
+                  }}
+                />
+              ))}
+              <Sparkles className="relative w-4 h-4 text-astro-navy" />
             </div>
             <span className="text-xl font-display font-bold text-astro-navy">
-              AstroXprt
+              AstroXpert
             </span>
           </Link>
 
