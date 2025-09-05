@@ -7,14 +7,11 @@ const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navigationItems = [
-    { name: 'Home', path: '/', icon: Star },
     { name: 'Kundali', path: '/kundali', icon: Star },
     { name: 'Matchmaking', path: '/matchmaking', icon: Heart },
     { name: 'Horoscope', path: '/horoscope', icon: Calendar },
-    { name: 'Panchang', path: '/panchang', icon: Calendar },
     { name: 'Palm Reading', path: '/palm-reading', icon: Hand },
     { name: 'Face Reading', path: '/face-reading', icon: Eye },
-    { name: 'Tarot Reading', path: '/tarot-reading', icon: Sparkles },
     { name: 'News & Blog', path: '/blog', icon: BookOpen },
   ];
 
