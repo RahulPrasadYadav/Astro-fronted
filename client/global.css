@@ -23,6 +23,10 @@
     --astro-navy-dark: 220 30% 15%;
     --cosmic: 280 40% 60%;
     --cosmic-light: 280 30% 90%;
+    /* Light Orange for hover accents */
+    --astro-orange: 35 100% 70%;
+    --astro-orange-light: 35 100% 85%;
+    --astro-orange-dark: 35 100% 60%;
 
     --background: 52 100% 97%;
     --foreground: 220 30% 20%;
@@ -73,6 +77,9 @@
     --astro-navy-dark: 220 50% 85%;
     --cosmic: 280 35% 75%;
     --cosmic-light: 280 25% 20%;
+    --astro-orange: 35 90% 65%;
+    --astro-orange-light: 35 90% 80%;
+    --astro-orange-dark: 35 90% 55%;
 
     --background: 220 80% 8%;
     --foreground: 45 85% 85%;
