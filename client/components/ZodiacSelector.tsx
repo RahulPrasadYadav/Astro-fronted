@@ -205,11 +205,6 @@ const ZodiacCard = ({ sign, isSelected, onClick }: {
           </div>
         )}
 
-        {/* Hover Glow Border */}
-        <div className={`
-          absolute inset-0 rounded-2xl border-2 border-astro-gold opacity-0 
-          group-hover:opacity-100 transition-opacity duration-500 animate-pulse
-        `} />
       </div>
     </div>
   );
