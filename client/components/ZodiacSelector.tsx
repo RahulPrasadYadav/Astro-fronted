@@ -117,11 +117,11 @@ const ZodiacCard = ({ sign, isSelected, onClick }: {
     <div
       onClick={onClick}
       className={`
-        group cursor-pointer relative overflow-hidden rounded-2xl border-2 
+        group cursor-pointer relative overflow-hidden rounded-2xl
         transition-all duration-500 transform hover:scale-105 hover:-translate-y-2
-        ${isSelected 
-          ? 'border-astro-gold shadow-lg shadow-astro-gold/30 scale-105' 
-          : 'border-astro-gold/30 hover:border-astro-gold hover:shadow-xl hover:shadow-astro-gold/20'
+        ${isSelected
+          ? 'shadow-lg shadow-astro-gold/30 scale-105'
+          : 'hover:shadow-xl hover:shadow-astro-gold/20'
         }
         bg-white/80 backdrop-blur-sm
       `}
