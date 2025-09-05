@@ -35,7 +35,7 @@ const Navigation = () => {
               <Link
                 key={item.name}
                 to={item.path}
-                className="text-astro-navy hover:text-astro-gold-dark transition-colors duration-200 font-medium text-sm"
+                className="text-astro-navy hover:text-astro-orange transition-colors duration-200 font-medium text-sm"
               >
                 {item.name}
               </Link>
@@ -59,7 +59,7 @@ const Navigation = () => {
           <div className="lg:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-astro-navy hover:text-astro-gold-dark transition-colors"
+              className="text-astro-navy hover:text-astro-orange transition-colors"
             >
               {isMenuOpen ? (
                 <X className="h-6 w-6" />
