@@ -82,7 +82,7 @@ const FAQAccordion = ({ item, isOpen, onToggle }: {
         onClick={onToggle}
         className="w-full px-6 py-5 text-left flex items-center justify-between group"
       >
-        <h3 className="text-lg font-semibold text-astro-navy group-hover:text-astro-gold-dark transition-colors pr-4">
+        <h3 className="text-lg font-semibold text-astro-navy group-hover:text-astro-orange transition-colors pr-4">
           {item.question}
         </h3>
         <div className={`
