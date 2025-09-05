@@ -11,11 +11,11 @@ export default function Index() {
   return (
     <div className="min-h-screen">
       <HolographicAvatar />
+      <FreeServices />
       <ZodiacSelector />
       <AstrologerCards />
       <CustomerReviews />
       <CelebrityVideos />
-      <FreeServices />
       <FAQ />
       <BlogPreview />
     </div>
