@@ -1,5 +1,4 @@
-import useEmblaCarousel from 'embla-carousel-react';
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Sparkles, Moon, Sun, Star } from 'lucide-react';
 import { Button } from './ui/button';
 
@@ -104,48 +103,27 @@ const Slides = [
 ];
 
 const BannerSlider = () => {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: 'center' });
-  const [selectedIndex, setSelectedIndex] = useState(0);
-  const autoplayRef = useRef<NodeJS.Timeout | null>(null);
+  const [index, setIndex] = useState(0);
   const isHovering = useRef(false);
-
-  const onSelect = useCallback(() => {
-    if (!emblaApi) return;
-    setSelectedIndex(emblaApi.selectedScrollSnap());
-  }, [emblaApi]);
+  const total = Slides.length;
 
   useEffect(() => {
-    if (!emblaApi) return;
-    emblaApi.on('select', onSelect);
-    onSelect();
-  }, [emblaApi, onSelect]);
-
-  useEffect(() => {
-    if (!emblaApi) return;
-    const start = () => {
-      stop();
-      autoplayRef.current = setInterval(() => {
-        if (!isHovering.current) emblaApi.scrollNext();
-      }, 4500);
-    };
-    const stop = () => {
-      if (autoplayRef.current) clearInterval(autoplayRef.current);
-    };
-    start();
-    return stop;
-  }, [emblaApi]);
+    const id = setInterval(() => {
+      if (!isHovering.current) setIndex((prev) => (prev + 1) % total);
+    }, 4500);
+    return () => clearInterval(id);
+  }, [total]);
 
   return (
     <section className="relative overflow-hidden">
       <div
         onMouseEnter={() => (isHovering.current = true)}
         onMouseLeave={() => (isHovering.current = false)}
-        className="embla relative"
-        ref={emblaRef}
+        className="relative"
       >
-        <div className="embla__container flex">
+        <div className="flex transition-transform duration-700 ease-out" style={{ transform: `translateX(-${index * 100}%)`, width: `${total * 100}%` }}>
           {Slides.map((s) => (
-            <div key={s.id} className="embla__slide min-w-0 flex-[0_0_100%]">
+            <div key={s.id} className="min-w-full">
               <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
                 <div
                   className="absolute inset-0"
@@ -187,9 +165,9 @@ const BannerSlider = () => {
           {Slides.map((_, i) => (
             <button
               key={i}
-              onClick={() => emblaApi?.scrollTo(i)}
+              onClick={() => setIndex(i)}
               className={`w-2.5 h-2.5 rounded-full transition-all ${
-                i === selectedIndex ? 'bg-astro-gold scale-125 shadow' : 'bg-white/50 hover:bg-white'
+                i === index ? 'bg-astro-gold scale-125 shadow' : 'bg-white/50 hover:bg-white'
               }`}
             />
           ))}
