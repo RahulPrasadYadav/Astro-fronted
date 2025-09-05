@@ -12,8 +12,8 @@ export default function Index() {
     <div className="min-h-screen">
       <HolographicAvatar />
       <FreeServices />
-      <ZodiacSelector />
       <AstrologerCards />
+      <ZodiacSelector />
       <CustomerReviews />
       <CelebrityVideos />
       <FAQ />
