@@ -13,6 +13,7 @@ interface ZodiacSign {
 const signImages: Record<string, string> = {
   Aries: 'https://cdn.builder.io/api/v1/image/assets%2F051248bf61844be4835e51ba02d80da0%2F873ea004eacc4f3f82996d9b601c9b45?format=webp&width=800',
   Taurus: 'https://cdn.builder.io/api/v1/image/assets%2F051248bf61844be4835e51ba02d80da0%2Ff589c7d58933402795eb673ff5d9cfc0?format=webp&width=800',
+  Gemini: 'https://cdn.builder.io/api/v1/image/assets%2F051248bf61844be4835e51ba02d80da0%2F73510deb94304413a6a05c69f73c88bc?format=webp&width=800',
   Cancer: 'https://cdn.builder.io/api/v1/image/assets%2F051248bf61844be4835e51ba02d80da0%2Fd61ac352501440cfbfe13bfcd7dd47f0?format=webp&width=800',
   Leo: 'https://cdn.builder.io/api/v1/image/assets%2F051248bf61844be4835e51ba02d80da0%2F8085a0c94ed44de29599f00560c2a09c?format=webp&width=800',
   Virgo: 'https://cdn.builder.io/api/v1/image/assets%2F051248bf61844be4835e51ba02d80da0%2Fa69f183d892f474abcbad81a0b67721a?format=webp&width=800',
@@ -20,6 +21,8 @@ const signImages: Record<string, string> = {
   Scorpio: 'https://cdn.builder.io/api/v1/image/assets%2F051248bf61844be4835e51ba02d80da0%2F5e26813b17f342f2a11a6d7d31cc7ae1?format=webp&width=800',
   Sagittarius: 'https://cdn.builder.io/api/v1/image/assets%2F051248bf61844be4835e51ba02d80da0%2Fba4ba4820f8e4715974bf7038e225fc1?format=webp&width=800',
   Capricorn: 'https://cdn.builder.io/api/v1/image/assets%2F051248bf61844be4835e51ba02d80da0%2F6dda933f76bf42a7a9d91f50a57910f7?format=webp&width=800',
+  Aquarius: 'https://cdn.builder.io/api/v1/image/assets%2F051248bf61844be4835e51ba02d80da0%2F058af7c74ecb4469bdb1f0c7c7a2cb5c?format=webp&width=800',
+  Pisces: 'https://cdn.builder.io/api/v1/image/assets%2F051248bf61844be4835e51ba02d80da0%2F90ba45f41c784f939a1ba4395df685b8?format=webp&width=800',
 };
 
 const zodiacSigns: ZodiacSign[] = [
