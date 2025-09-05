@@ -1,4 +1,4 @@
-import HolographicAvatar from '../components/HolographicAvatar';
+import BannerSlider from '../components/BannerSlider';
 import ZodiacSelector from '../components/ZodiacSelector';
 import AstrologerCards from '../components/AstrologerCards';
 import CustomerReviews from '../components/CustomerReviews';
