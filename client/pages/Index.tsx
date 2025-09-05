@@ -10,7 +10,7 @@ import BlogPreview from '../components/BlogPreview';
 export default function Index() {
   return (
     <div className="min-h-screen">
-      <HolographicAvatar />
+      <BannerSlider />
       <FreeServices />
       <AstrologerCards />
       <ZodiacSelector />
