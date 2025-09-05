@@ -82,7 +82,7 @@ const BlogCard = ({ post, featured = false }: { post: BlogPost; featured?: boole
             {/* Content */}
             <div className="p-8 flex flex-col justify-between">
               <div>
-                <h3 className="text-2xl font-display font-bold text-astro-navy mb-4 group-hover:text-astro-gold-dark transition-colors">
+                <h3 className="text-2xl font-display font-bold text-astro-navy mb-4 group-hover:text-astro-orange transition-colors">
                   {post.title}
                 </h3>
                 <p className="text-astro-navy/70 mb-6 leading-relaxed">
@@ -154,7 +154,7 @@ const BlogCard = ({ post, featured = false }: { post: BlogPost; featured?: boole
         
         {/* Content */}
         <div className="p-6">
-          <h3 className="text-lg font-display font-bold text-astro-navy mb-3 group-hover:text-astro-gold-dark transition-colors line-clamp-2">
+          <h3 className="text-lg font-display font-bold text-astro-navy mb-3 group-hover:text-astro-orange transition-colors line-clamp-2">
             {post.title}
           </h3>
           <p className="text-astro-navy/70 text-sm mb-4 line-clamp-3">
