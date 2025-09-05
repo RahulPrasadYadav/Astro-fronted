@@ -243,7 +243,7 @@ const ZodiacSelector = () => {
           <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-astro-gold to-astro-gold-dark rounded-full mb-6 animate-pulse">
             <span className="text-2xl">✨</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-display font-bold text-astro-orange mb-4">
+          <h2 className="text-4xl md:text-5xl font-display font-bold text-astro-navy mb-4">
             Choose Your{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-astro-orange-light to-astro-orange">
               Zodiac Sign
