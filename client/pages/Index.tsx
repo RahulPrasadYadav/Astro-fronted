@@ -1,4 +1,4 @@
-import BannerSlider from '../components/BannerSlider';
+import HolographicAvatar from '../components/HolographicAvatar';
 import ZodiacSelector from '../components/ZodiacSelector';
 import AstrologerCards from '../components/AstrologerCards';
 import CustomerReviews from '../components/CustomerReviews';
@@ -10,7 +10,7 @@ import BlogPreview from '../components/BlogPreview';
 export default function Index() {
   return (
     <div className="min-h-screen">
-      <BannerSlider />
+      <HolographicAvatar />
       <FreeServices />
       <AstrologerCards />
       <ZodiacSelector />
