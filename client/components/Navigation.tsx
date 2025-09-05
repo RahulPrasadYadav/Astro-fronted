@@ -21,7 +21,7 @@ const Navigation = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-xl border-b border-astro-gold/20 shadow-lg shadow-astro-gold/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="relative flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
             <div className="w-8 h-8 bg-gradient-to-br from-astro-gold to-astro-gold-dark rounded-full flex items-center justify-center">
@@ -33,12 +33,12 @@ const Navigation = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
+          <div className="hidden lg:flex absolute inset-0 items-center justify-center space-x-8 pointer-events-none">
             {navigationItems.map((item) => (
               <Link
                 key={item.name}
                 to={item.path}
-                className="text-astro-navy hover:text-astro-gold-dark transition-colors duration-200 font-medium text-sm"
+                className="text-astro-navy hover:text-astro-gold-dark transition-colors duration-200 font-medium text-sm pointer-events-auto"
               >
                 {item.name}
               </Link>
