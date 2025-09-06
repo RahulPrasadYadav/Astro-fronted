@@ -39,11 +39,11 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { name: 'Facebook', icon: Facebook, url: 'https://facebook.com/astroxprt' },
-    { name: 'Twitter', icon: Twitter, url: 'https://twitter.com/astroxprt' },
-    { name: 'Instagram', icon: Instagram, url: 'https://instagram.com/astroxprt' },
-    { name: 'YouTube', icon: Youtube, url: 'https://youtube.com/astroxprt' },
-    { name: 'LinkedIn', icon: Linkedin, url: 'https://linkedin.com/company/astroxprt' }
+    { name: 'Facebook', icon: Facebook, url: 'https://facebook.com/astroxpert' },
+    { name: 'Twitter', icon: Twitter, url: 'https://twitter.com/astroxpert' },
+    { name: 'Instagram', icon: Instagram, url: 'https://instagram.com/astroxpert' },
+    { name: 'YouTube', icon: Youtube, url: 'https://youtube.com/astroxpert' },
+    { name: 'LinkedIn', icon: Linkedin, url: 'https://linkedin.com/company/astroxpert' }
   ];
 
   return (
@@ -58,7 +58,7 @@ const Footer = () => {
                 <Star className="w-6 h-6 text-astro-navy" />
               </div>
               <span className="text-3xl font-display font-bold text-astro-gold">
-                AstroXprt
+                AstroXpert
               </span>
             </div>
             <p className="text-astro-navy-light mb-6 leading-relaxed">
@@ -74,7 +74,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-astro-gold" />
-                <span className="text-astro-navy-light">hello@astroxprt.com</span>
+                <span className="text-astro-navy-light">hello@astroxpert.com</span>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="w-5 h-5 text-astro-gold" />
@@ -216,7 +216,7 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between">
             <div className="text-astro-navy-light text-sm mb-4 md:mb-0">
-              © {currentYear} AstroXprt. All rights reserved. | Crafted with cosmic wisdom and modern technology.
+              © {currentYear} AstroXpert. All rights reserved. | Crafted with cosmic wisdom and modern technology.
             </div>
             <div className="flex space-x-6 text-sm">
               <Link to="/privacy" className="text-astro-navy-light hover:text-astro-gold transition-colors">
