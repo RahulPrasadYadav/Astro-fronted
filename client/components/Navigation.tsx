@@ -16,7 +16,7 @@ const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navigationItems = [
-    { name: "Kundali", path: "/kundali", icon: Star },
+    { name: "Kundali", path: "/kundali", icon: Sparkles },
     { name: "Matchmaking", path: "/matchmaking", icon: Heart },
     { name: "Horoscope", path: "/horoscope", icon: Calendar },
     { name: "Palm Reading", path: "/palm-reading", icon: Hand },
