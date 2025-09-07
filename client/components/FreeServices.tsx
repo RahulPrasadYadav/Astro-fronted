@@ -38,10 +38,6 @@ const freeServices: FreeService[] = [
     features: [
       "Birth Chart Analysis",
       "Planetary Positions",
-      "Ascendant & Houses",
-      "Yogas & Doshas",
-      "Dasha Predictions",
-      "Strengths & Remedies",
     ],
     bgGradient: "from-purple-100 to-pink-100",
     iconColor: "text-purple-500",
