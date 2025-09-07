@@ -21,6 +21,7 @@ import PalmReading from "./pages/PalmReading";
 import FaceReading from "./pages/FaceReading";
 import TarotReading from "./pages/TarotReading";
 import Blog from "./pages/Blog";
+import Login from "./pages/Login";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
