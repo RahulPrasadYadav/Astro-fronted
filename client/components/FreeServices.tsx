@@ -23,6 +23,9 @@ const freeServices: FreeService[] = [
       "Career & Finance",
       "Health & Wellness",
       "Lucky Numbers",
+      "Lucky Colors",
+      "Do's & Don'ts",
+      "Mood & Tips",
     ],
     bgGradient: "from-orange-100 to-yellow-100",
     iconColor: "text-orange-500",
@@ -35,8 +38,10 @@ const freeServices: FreeService[] = [
     features: [
       "Birth Chart Analysis",
       "Planetary Positions",
+      "Ascendant & Houses",
+      "Yogas & Doshas",
       "Dasha Predictions",
-      "Remedies",
+      "Strengths & Remedies",
     ],
     bgGradient: "from-purple-100 to-pink-100",
     iconColor: "text-purple-500",
@@ -51,8 +56,11 @@ const freeServices: FreeService[] = [
     features: [
       "Tithi & Nakshatra",
       "Muhurat Timings",
+      "Rahukaal & Yamagandam",
+      "Choghadiya",
       "Festival Dates",
       "Sunrise/Sunset",
+      "Abhijit Muhurat",
     ],
     bgGradient: "from-green-100 to-emerald-100",
     iconColor: "text-green-500",
@@ -67,6 +75,9 @@ const freeServices: FreeService[] = [
       "Card Meaning",
       "Life Guidance",
       "Meditation Tips",
+      "Yes/No Reading",
+      "Affirmation",
+      "Action Advice",
     ],
     bgGradient: "from-blue-100 to-indigo-100",
     iconColor: "text-blue-500",
@@ -85,15 +96,24 @@ const ServiceCard = ({ service }: { service: FreeService }) => {
         >
           {service.imageSrc && (
             <div className="-m-6 mb-4">
-              <img
-                src={service.imageSrc}
-                alt={`${service.title} image`}
-                className="w-full h-40 object-cover"
-              />
+              <div className="w-full aspect-square overflow-hidden">
+                <img
+                  src={service.imageSrc}
+                  alt={`${service.title} image`}
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </div>
           )}
-          <div className="absolute top-0 right-0 w-20 h-20 bg-white/20 rounded-full -mr-10 -mt-10"></div>
-          <div className="absolute bottom-0 left-0 w-16 h-16 bg-white/10 rounded-full -ml-8 -mb-8"></div>
+          {!service.imageSrc && (
+            <>
+              <div className="absolute top-0 right-0 w-20 h-20 bg-white/20 rounded-full -mr-10 -mt-10"></div>
+              <div className="absolute bottom-0 left-0 w-16 h-16 bg-white/10 rounded-full -ml-8 -mb-8"></div>
+            </>
+          )}
+          {service.title.toLowerCase().includes('free') && (
+            <span className="absolute top-3 left-3 z-20 text-[10px] tracking-widest px-2 py-0.5 bg-astro-gold text-astro-navy rounded-full font-semibold">FREE</span>
+          )}
           <div className="relative z-10">
             <div
               className={`w-16 h-16 ${service.iconColor} bg-white/80 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}
