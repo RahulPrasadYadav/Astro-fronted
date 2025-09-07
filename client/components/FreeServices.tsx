@@ -9,6 +9,7 @@ interface FreeService {
   features: string[];
   bgGradient: string;
   iconColor: string;
+  imageSrc?: string;
 }
 
 const freeServices: FreeService[] = [
@@ -39,6 +40,7 @@ const freeServices: FreeService[] = [
     ],
     bgGradient: "from-purple-100 to-pink-100",
     iconColor: "text-purple-500",
+    imageSrc: "https://cdn.builder.io/api/v1/image/assets%2F051248bf61844be4835e51ba02d80da0%2F93d961d9e752499186b6d37cbdd20a57?format=webp&width=800",
   },
   {
     id: "3",
@@ -79,8 +81,17 @@ const ServiceCard = ({ service }: { service: FreeService }) => {
       <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl border border-astro-gold/20 overflow-hidden transform hover:-translate-y-2 transition-all duration-300">
         {/* Header with Icon */}
         <div
-          className={`bg-gradient-to-br ${service.bgGradient} p-6 relative overflow-hidden`}
+          className={`relative overflow-hidden p-6 ${!service.imageSrc ? `bg-gradient-to-br ${service.bgGradient}` : ''}`}
         >
+          {service.imageSrc && (
+            <div className="-m-6 mb-4">
+              <img
+                src={service.imageSrc}
+                alt={`${service.title} image`}
+                className="w-full h-40 object-cover"
+              />
+            </div>
+          )}
           <div className="absolute top-0 right-0 w-20 h-20 bg-white/20 rounded-full -mr-10 -mt-10"></div>
           <div className="absolute bottom-0 left-0 w-16 h-16 bg-white/10 rounded-full -ml-8 -mb-8"></div>
           <div className="relative z-10">
