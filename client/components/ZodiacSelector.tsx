@@ -168,14 +168,14 @@ const ZodiacCard = ({
       />
 
       {/* Content */}
-      <div className="relative z-10 p-6 text-center">
+      <div className="relative z-10 p-4 text-center">
         {/* Sign Artwork or Fallback */}
         {img ? (
-          <div className="w-full h-40 md:h-44 mb-4 rounded-xl overflow-hidden shadow-lg">
+          <div className="w-full aspect-square mb-2 rounded-xl overflow-hidden shadow-lg bg-white">
             <img
               src={img}
               alt={`${sign.name} sign`}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-contain"
             />
           </div>
         ) : null}
@@ -192,10 +192,6 @@ const ZodiacCard = ({
           </div>
         )}
 
-        {/* Sign Name */}
-        <h3 className="text-xl font-display font-bold text-astro-navy mb-3 group-hover:text-astro-orange transition-colors">
-          {sign.name}
-        </h3>
 
         {/* Selection Indicator */}
         {isSelected && (
