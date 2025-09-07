@@ -26,6 +26,7 @@ const freeServices: FreeService[] = [
     bgGradient: "from-orange-100 to-yellow-100",
     iconColor: "text-orange-500",
     imageSrc: "https://cdn.builder.io/api/v1/image/assets%2F051248bf61844be4835e51ba02d80da0%2Ffe926474d5314175abf4fef48cb07014?format=webp&width=800",
+    isFree: true,
   },
   {
     id: "2",
