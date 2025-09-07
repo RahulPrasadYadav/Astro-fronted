@@ -130,9 +130,7 @@ const Navigation = () => {
                   Schedule Appointment
                 </Button>
                 <a href="/login" onClick={() => setIsMenuOpen(false)}>
-                  <Button
-                    className="w-full bg-gradient-to-r from-astro-orange to-astro-orange-dark text-white hover:shadow-lg hover:shadow-astro-orange/30"
-                  >
+                  <Button className="w-full bg-gradient-to-r from-astro-orange to-astro-orange-dark text-white hover:shadow-lg hover:shadow-astro-orange/30">
                     Login
                   </Button>
                 </a>

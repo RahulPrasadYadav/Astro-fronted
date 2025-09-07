@@ -158,7 +158,6 @@ const ZodiacCard = ({
         }
       `}
     >
-
       {/* Content */}
       <div className="relative z-10 p-4 text-center">
         {/* Sign Artwork or Fallback */}
@@ -183,7 +182,6 @@ const ZodiacCard = ({
             {sign.symbol}
           </div>
         )}
-
 
         {/* Selection Indicator */}
         {isSelected && (

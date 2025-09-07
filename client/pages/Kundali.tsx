@@ -1,4 +1,4 @@
-import PlaceholderPage from '../components/PlaceholderPage';
+import PlaceholderPage from "../components/PlaceholderPage";
 
 export default function Kundali() {
   return (
@@ -10,7 +10,8 @@ export default function Kundali() {
             Free Astrology Tools
           </h2>
           <p className="text-center text-astro-navy/70 max-w-2xl mx-auto mb-8">
-            Explore our free Kundali and astrology resources. Start with your birth chart and dive deeper.
+            Explore our free Kundali and astrology resources. Start with your
+            birth chart and dive deeper.
           </p>
           <div className="rounded-2xl overflow-hidden shadow-lg border border-astro-gold/30 max-w-3xl mx-auto">
             <img

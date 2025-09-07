@@ -19,13 +19,11 @@ const freeServices: FreeService[] = [
     title: "Daily Horoscope",
     description: "Get personalized daily predictions based on your zodiac sign",
     icon: Sun,
-    features: [
-      "Love & Relationships",
-      "Career & Finance"
-    ],
+    features: ["Love & Relationships", "Career & Finance"],
     bgGradient: "from-orange-100 to-yellow-100",
     iconColor: "text-orange-500",
-    imageSrc: "https://cdn.builder.io/api/v1/image/assets%2F051248bf61844be4835e51ba02d80da0%2Ffe926474d5314175abf4fef48cb07014?format=webp&width=800",
+    imageSrc:
+      "https://cdn.builder.io/api/v1/image/assets%2F051248bf61844be4835e51ba02d80da0%2Ffe926474d5314175abf4fef48cb07014?format=webp&width=800",
     isFree: true,
   },
   {
@@ -33,13 +31,11 @@ const freeServices: FreeService[] = [
     title: "Free Kundali Report",
     description: "Comprehensive birth chart analysis with planetary positions",
     icon: FileText,
-    features: [
-      "Birth Chart Analysis",
-      "Planetary Positions",
-    ],
+    features: ["Birth Chart Analysis", "Planetary Positions"],
     bgGradient: "from-purple-100 to-pink-100",
     iconColor: "text-purple-500",
-    imageSrc: "https://cdn.builder.io/api/v1/image/assets%2F051248bf61844be4835e51ba02d80da0%2F93d961d9e752499186b6d37cbdd20a57?format=webp&width=800",
+    imageSrc:
+      "https://cdn.builder.io/api/v1/image/assets%2F051248bf61844be4835e51ba02d80da0%2F93d961d9e752499186b6d37cbdd20a57?format=webp&width=800",
   },
   {
     id: "3",
@@ -47,13 +43,11 @@ const freeServices: FreeService[] = [
     description:
       "Complete Hindu calendar with auspicious timings and festivals",
     icon: Calendar,
-    features: [
-      "Tithi & Nakshatra",
-      "Muhurat Timings"
-    ],
+    features: ["Tithi & Nakshatra", "Muhurat Timings"],
     bgGradient: "from-green-100 to-emerald-100",
     iconColor: "text-green-500",
-    imageSrc: "https://cdn.builder.io/api/v1/image/assets%2F051248bf61844be4835e51ba02d80da0%2Fcb67530e7b2942798ae8a26b87525f1f?format=webp&width=800",
+    imageSrc:
+      "https://cdn.builder.io/api/v1/image/assets%2F051248bf61844be4835e51ba02d80da0%2Fcb67530e7b2942798ae8a26b87525f1f?format=webp&width=800",
     isFree: true,
   },
   {
@@ -61,13 +55,11 @@ const freeServices: FreeService[] = [
     title: "Tarot Card of the Day",
     description: "Draw your daily tarot card for guidance and inspiration",
     icon: Sparkles,
-    features: [
-      "Daily Card Draw",
-      "Card Meaning"
-    ],
+    features: ["Daily Card Draw", "Card Meaning"],
     bgGradient: "from-blue-100 to-indigo-100",
     iconColor: "text-blue-500",
-    imageSrc: "https://cdn.builder.io/api/v1/image/assets%2F051248bf61844be4835e51ba02d80da0%2F9ff641b654ac4104a2b4432067c04628?format=webp&width=800",
+    imageSrc:
+      "https://cdn.builder.io/api/v1/image/assets%2F051248bf61844be4835e51ba02d80da0%2F9ff641b654ac4104a2b4432067c04628?format=webp&width=800",
     isFree: true,
   },
 ];
@@ -80,7 +72,7 @@ const ServiceCard = ({ service }: { service: FreeService }) => {
       <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl border border-astro-gold/20 overflow-hidden transform hover:-translate-y-2 transition-all duration-300">
         {/* Header with Icon */}
         <div
-          className={`relative overflow-hidden p-6 ${!service.imageSrc ? `bg-gradient-to-br ${service.bgGradient}` : ''}`}
+          className={`relative overflow-hidden p-6 ${!service.imageSrc ? `bg-gradient-to-br ${service.bgGradient}` : ""}`}
         >
           {service.imageSrc && (
             <div className="-m-6 mb-4">
@@ -99,8 +91,10 @@ const ServiceCard = ({ service }: { service: FreeService }) => {
               <div className="absolute bottom-0 left-0 w-16 h-16 bg-white/10 rounded-full -ml-8 -mb-8"></div>
             </>
           )}
-          {(service.isFree || service.title.toLowerCase().includes('free')) && (
-            <span className="absolute top-3 left-3 z-20 text-[10px] tracking-widest px-2 py-0.5 bg-astro-gold text-astro-navy rounded-full font-semibold">FREE</span>
+          {(service.isFree || service.title.toLowerCase().includes("free")) && (
+            <span className="absolute top-3 left-3 z-20 text-[10px] tracking-widest px-2 py-0.5 bg-astro-gold text-astro-navy rounded-full font-semibold">
+              FREE
+            </span>
           )}
           <div className="relative z-10">
             <h3 className="text-xl font-display font-bold text-astro-navy mb-2">
