@@ -111,11 +111,6 @@ const ServiceCard = ({ service }: { service: FreeService }) => {
             <span className="absolute top-3 left-3 z-20 text-[10px] tracking-widest px-2 py-0.5 bg-astro-gold text-astro-navy rounded-full font-semibold">FREE</span>
           )}
           <div className="relative z-10">
-            <div
-              className={`w-16 h-16 ${service.iconColor} bg-white/80 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}
-            >
-              <Icon className="w-8 h-8" />
-            </div>
             <h3 className="text-xl font-display font-bold text-astro-navy mb-2">
               {service.title}
             </h3>
