@@ -56,7 +56,7 @@ const Navigation = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center justify-center space-x-8 lg:justify-self-center">
+          <div className="hidden lg:flex items-center space-x-8 lg:justify-self-center lg:ml-8 xl:ml-12">
             {navigationItems.map((item) => (
               <Link
                 key={item.name}
@@ -70,11 +70,6 @@ const Navigation = () => {
 
           {/* Desktop CTA Buttons */}
           <div className="hidden lg:flex items-center space-x-4 lg:justify-self-end">
-            <a href="/login">
-              <Button className="bg-gradient-to-r from-astro-orange to-astro-orange-dark text-white hover:shadow-lg hover:shadow-astro-orange/30">
-                Login
-              </Button>
-            </a>
             <Button
               variant="outline"
               className="border-astro-navy text-astro-navy hover:bg-astro-navy hover:text-white"
@@ -84,6 +79,11 @@ const Navigation = () => {
             <Button className="bg-gradient-to-r from-astro-gold to-astro-gold-dark text-astro-navy hover:shadow-lg hover:shadow-astro-gold/30 animate-glow">
               Schedule Appointment
             </Button>
+            <a href="/login">
+              <Button className="bg-gradient-to-r from-astro-orange to-astro-orange-dark text-white hover:shadow-lg hover:shadow-astro-orange/30">
+                Login
+              </Button>
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -120,13 +120,6 @@ const Navigation = () => {
                 );
               })}
               <div className="pt-4 space-y-3">
-                <a href="/login" onClick={() => setIsMenuOpen(false)}>
-                  <Button
-                    className="w-full bg-gradient-to-r from-astro-orange to-astro-orange-dark text-white hover:shadow-lg hover:shadow-astro-orange/30"
-                  >
-                    Login
-                  </Button>
-                </a>
                 <Button
                   variant="outline"
                   className="w-full border-astro-navy text-astro-navy hover:bg-astro-navy hover:text-white"
@@ -136,6 +129,13 @@ const Navigation = () => {
                 <Button className="w-full bg-gradient-to-r from-astro-gold to-astro-gold-dark text-astro-navy hover:shadow-lg">
                   Schedule Appointment
                 </Button>
+                <a href="/login" onClick={() => setIsMenuOpen(false)}>
+                  <Button
+                    className="w-full bg-gradient-to-r from-astro-orange to-astro-orange-dark text-white hover:shadow-lg hover:shadow-astro-orange/30"
+                  >
+                    Login
+                  </Button>
+                </a>
               </div>
             </div>
           </div>
