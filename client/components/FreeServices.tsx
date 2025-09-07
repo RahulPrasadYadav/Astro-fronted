@@ -10,6 +10,7 @@ interface FreeService {
   bgGradient: string;
   iconColor: string;
   imageSrc?: string;
+  isFree?: boolean;
 }
 
 const freeServices: FreeService[] = [
@@ -47,15 +48,12 @@ const freeServices: FreeService[] = [
     icon: Calendar,
     features: [
       "Tithi & Nakshatra",
-      "Muhurat Timings",
-      "Rahukaal & Yamagandam",
-      "Choghadiya",
-      "Festival Dates",
-      "Sunrise/Sunset",
-      "Abhijit Muhurat",
+      "Muhurat Timings"
     ],
     bgGradient: "from-green-100 to-emerald-100",
     iconColor: "text-green-500",
+    imageSrc: "https://cdn.builder.io/api/v1/image/assets%2F051248bf61844be4835e51ba02d80da0%2Fcb67530e7b2942798ae8a26b87525f1f?format=webp&width=800",
+    isFree: true,
   },
   {
     id: "4",
@@ -64,15 +62,12 @@ const freeServices: FreeService[] = [
     icon: Sparkles,
     features: [
       "Daily Card Draw",
-      "Card Meaning",
-      "Life Guidance",
-      "Meditation Tips",
-      "Yes/No Reading",
-      "Affirmation",
-      "Action Advice",
+      "Card Meaning"
     ],
     bgGradient: "from-blue-100 to-indigo-100",
     iconColor: "text-blue-500",
+    imageSrc: "https://cdn.builder.io/api/v1/image/assets%2F051248bf61844be4835e51ba02d80da0%2F9ff641b654ac4104a2b4432067c04628?format=webp&width=800",
+    isFree: true,
   },
 ];
 
@@ -103,7 +98,7 @@ const ServiceCard = ({ service }: { service: FreeService }) => {
               <div className="absolute bottom-0 left-0 w-16 h-16 bg-white/10 rounded-full -ml-8 -mb-8"></div>
             </>
           )}
-          {service.title.toLowerCase().includes('free') && (
+          {(service.isFree || service.title.toLowerCase().includes('free')) && (
             <span className="absolute top-3 left-3 z-20 text-[10px] tracking-widest px-2 py-0.5 bg-astro-gold text-astro-navy rounded-full font-semibold">FREE</span>
           )}
           <div className="relative z-10">
