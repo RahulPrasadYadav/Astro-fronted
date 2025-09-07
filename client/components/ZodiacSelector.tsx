@@ -95,7 +95,7 @@ const zodiacSigns: ZodiacSign[] = [
   },
   {
     name: "Scorpio",
-    symbol: "♏",
+    symbol: "���",
     emoji: "🦂",
     element: "Water",
     color: "from-purple-500 to-indigo-600",
@@ -156,26 +156,18 @@ const ZodiacCard = ({
             ? "shadow-lg shadow-astro-gold/30 scale-105"
             : "hover:shadow-xl hover:shadow-astro-gold/20"
         }
-        bg-white/80 backdrop-blur-sm
       `}
     >
-      {/* Animated Background Gradient */}
-      <div
-        className={`
-          absolute inset-0 bg-gradient-to-br ${sign.color} opacity-10 
-          group-hover:opacity-20 transition-opacity duration-500
-        `}
-      />
 
       {/* Content */}
       <div className="relative z-10 p-4 text-center">
         {/* Sign Artwork or Fallback */}
         {img ? (
-          <div className="w-full aspect-square mb-2 rounded-xl overflow-hidden shadow-lg bg-white">
+          <div className="w-full aspect-square mb-2 rounded-xl overflow-hidden shadow-lg">
             <img
               src={img}
               alt={`${sign.name} sign`}
-              className="w-full h-full object-contain"
+              className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
             />
           </div>
         ) : null}
