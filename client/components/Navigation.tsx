@@ -70,6 +70,11 @@ const Navigation = () => {
 
           {/* Desktop CTA Buttons */}
           <div className="hidden lg:flex items-center space-x-4 lg:justify-self-end">
+            <a href="/login">
+              <Button variant="outline" className="border-astro-gold text-astro-navy hover:bg-astro-gold hover:text-astro-navy">
+                Login
+              </Button>
+            </a>
             <Button
               variant="outline"
               className="border-astro-navy text-astro-navy hover:bg-astro-navy hover:text-white"
@@ -115,6 +120,14 @@ const Navigation = () => {
                 );
               })}
               <div className="pt-4 space-y-3">
+                <a href="/login" onClick={() => setIsMenuOpen(false)}>
+                  <Button
+                    variant="outline"
+                    className="w-full border-astro-gold text-astro-navy hover:bg-astro-gold hover:text-astro-navy"
+                  >
+                    Login
+                  </Button>
+                </a>
                 <Button
                   variant="outline"
                   className="w-full border-astro-navy text-astro-navy hover:bg-astro-navy hover:text-white"
