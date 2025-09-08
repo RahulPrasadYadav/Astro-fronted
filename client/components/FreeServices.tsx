@@ -1,4 +1,3 @@
-import { Sun, FileText, Calendar, Sparkles, ArrowRight } from "lucide-react";
 import { Button } from "./ui/button";
 import { Sun, Calendar, FileText, Sparkles, ArrowRight } from "lucide-react";
 
