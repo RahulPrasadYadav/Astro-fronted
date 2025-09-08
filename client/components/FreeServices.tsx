@@ -1,5 +1,6 @@
 import { Sun, FileText, Calendar, Sparkles, ArrowRight } from "lucide-react";
 import { Button } from "./ui/button";
+import { Sun, Calendar, FileText, Sparkles, ArrowRight } from "lucide-react";
 
 interface FreeService {
   id: string;
@@ -60,6 +61,46 @@ const freeServices: FreeService[] = [
     iconColor: "text-blue-500",
     imageSrc:
       "https://cdn.builder.io/api/v1/image/assets%2F051248bf61844be4835e51ba02d80da0%2F9ff641b654ac4104a2b4432067c04628?format=webp&width=800",
+    isFree: true,
+  },
+  {
+    id: "5",
+    title: "Palm Reading",
+    description: "Analyze your palm lines for insights into destiny and traits",
+    icon: Sparkles,
+    features: ["Major Lines", "Personality Traits"],
+    bgGradient: "from-rose-100 to-orange-100",
+    iconColor: "text-rose-500",
+    isFree: true,
+  },
+  {
+    id: "6",
+    title: "Face Reading",
+    description: "Discover personality cues from facial features",
+    icon: Sparkles,
+    features: ["Forehead & Eyes", "Traits & Tendencies"],
+    bgGradient: "from-fuchsia-100 to-purple-100",
+    iconColor: "text-fuchsia-500",
+    isFree: true,
+  },
+  {
+    id: "7",
+    title: "Numerology",
+    description: "Decode your numbers for life path and compatibility",
+    icon: Sparkles,
+    features: ["Life Path Number", "Compatibility"],
+    bgGradient: "from-cyan-100 to-sky-100",
+    iconColor: "text-cyan-500",
+    isFree: true,
+  },
+  {
+    id: "8",
+    title: "Matchmaking",
+    description: "Check compatibility with traditional Guna Milan",
+    icon: Sparkles,
+    features: ["Guna Score", "Dosha Check"],
+    bgGradient: "from-teal-100 to-emerald-100",
+    iconColor: "text-teal-500",
     isFree: true,
   },
 ];
